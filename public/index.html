@@ -34,35 +34,14 @@
     display: flex; align-items: center; justify-content: space-between;
     height: 72px;
   }
-
-  .nav-logo {
-    display: flex; align-items: center; gap: 14px; text-decoration: none;
-  }
-  .nav-logo-icon {
-    width: 48px; height: 48px; border-radius: 12px;
-    background: var(--blue-light);
-    display: flex; align-items: center; justify-content: center;
-  }
+  .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .nav-logo-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; }
   .nav-logo-icon svg { width: 28px; height: 28px; }
-  .nav-logo-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px; font-weight: 700;
-    color: var(--black);
-  }
-
-  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-  .nav-links a {
-    text-decoration: none; font-size: 14px; font-weight: 500;
-    color: var(--black); letter-spacing: 0.03em;
-    transition: color 0.2s;
-  }
+  .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--black); }
+  .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+  .nav-links a { text-decoration: none; font-size: 14px; font-weight: 500; color: var(--black); letter-spacing: 0.03em; transition: color 0.2s; }
   .nav-links a:hover { color: var(--blue); }
-
-  .nav-cta {
-    background: var(--blue); color: var(--white) !important;
-    padding: 10px 22px; border-radius: 50px;
-    font-weight: 600 !important;
-  }
+  .nav-cta { background: var(--blue); color: var(--white) !important; padding: 10px 22px; border-radius: 50px; font-weight: 600 !important; }
   .nav-cta:hover { background: #007aaa !important; color: var(--white) !important; }
 
   /* ── HERO ── */
@@ -75,260 +54,114 @@
     border-bottom: 3px solid var(--blue-light);
     overflow: hidden;
   }
-
-  /* left: general info */
-  .hero-left {
-    background: var(--white);
-    border-right: 2px solid var(--blue-light);
-    padding: 40px 32px;
-    display: flex; flex-direction: column; justify-content: space-between;
-  }
-  .hero-left h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--grey); margin-bottom: 12px;
-  }
-  .general-info p {
-    font-size: 14px; line-height: 1.7; color: #444;
-  }
-  .mission-tag {
-    display: inline-block;
-    background: var(--blue-light);
-    color: var(--black);
-    font-size: 12px; font-weight: 600; letter-spacing: 0.06em;
-    padding: 6px 14px; border-radius: 50px;
-    margin-top: 24px;
-  }
-
-  /* center: hero */
-  .hero-center {
-    padding: 64px 48px 48px;
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-    text-align: center;
-    position: relative;
-  }
-
-  .slogan-label {
-    font-size: 11px; font-weight: 600; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--blue);
-    margin-bottom: 20px;
-  }
-
-  .hero-headline {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(36px, 5vw, 58px);
-    font-weight: 900; line-height: 1.1;
-    color: var(--black);
-    margin-bottom: 16px;
-  }
-  .hero-headline em {
-    color: var(--blue); font-style: normal;
-  }
-
-  .hero-sub {
-    font-size: 16px; color: #555; line-height: 1.6;
-    max-width: 420px; margin: 0 auto 32px;
-  }
-
+  .hero-left { background: var(--white); border-right: 2px solid var(--blue-light); padding: 40px 32px; display: flex; flex-direction: column; justify-content: space-between; }
+  .hero-left h3 { font-family: 'Playfair Display', serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey); margin-bottom: 12px; }
+  .general-info p { font-size: 14px; line-height: 1.7; color: #444; }
+  .mission-tag { display: inline-block; background: var(--blue-light); color: var(--black); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; padding: 6px 14px; border-radius: 50px; margin-top: 24px; }
+  .hero-center { padding: 64px 48px 48px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; }
+  .slogan-label { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 20px; }
+  .hero-headline { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 58px); font-weight: 900; line-height: 1.1; color: var(--black); margin-bottom: 16px; }
+  .hero-headline em { color: var(--blue); font-style: normal; }
+  .hero-sub { font-size: 16px; color: #555; line-height: 1.6; max-width: 420px; margin: 0 auto 32px; }
   .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
-  .btn-primary {
-    background: var(--blue); color: var(--white);
-    padding: 14px 32px; border-radius: 50px;
-    font-size: 15px; font-weight: 600; text-decoration: none;
-    transition: transform 0.15s, box-shadow 0.15s;
-    box-shadow: 0 4px 16px rgba(0,153,204,0.35);
-  }
+  .btn-primary { background: var(--blue); color: var(--white); padding: 14px 32px; border-radius: 50px; font-size: 15px; font-weight: 600; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 4px 16px rgba(0,153,204,0.35); }
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,153,204,0.45); }
-  .btn-secondary {
-    border: 2px solid var(--black); color: var(--black);
-    padding: 12px 28px; border-radius: 50px;
-    font-size: 15px; font-weight: 600; text-decoration: none;
-    transition: background 0.15s;
-  }
+  .btn-secondary { border: 2px solid var(--black); color: var(--black); padding: 12px 28px; border-radius: 50px; font-size: 15px; font-weight: 600; text-decoration: none; transition: background 0.15s; }
   .btn-secondary:hover { background: var(--black); color: var(--white); }
-
-  /* right: leaderboard */
-  .hero-right {
-    background: var(--black);
-    padding: 32px 28px;
-    color: var(--white);
-    display: flex; flex-direction: column;
-  }
-  .hero-right h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--blue-light); margin-bottom: 6px;
-  }
-  .leaderboard-month {
-    font-size: 11px; color: var(--grey); margin-bottom: 20px;
-  }
-  .leaderboard-entry {
-    display: flex; align-items: center; gap: 12px;
-    padding: 10px 0;
-    border-bottom: 1px solid #2a2a2a;
-  }
+  .hero-right { background: var(--black); padding: 32px 28px; color: var(--white); display: flex; flex-direction: column; }
+  .hero-right h3 { font-family: 'Playfair Display', serif; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue-light); margin-bottom: 6px; }
+  .leaderboard-month { font-size: 11px; color: var(--grey); margin-bottom: 20px; }
+  .leaderboard-entry { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #2a2a2a; }
   .leaderboard-entry:last-child { border-bottom: none; }
-  .rank {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px; font-weight: 700;
-    color: var(--grey); width: 28px; text-align: center;
-  }
+  .rank { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--grey); width: 28px; text-align: center; }
   .rank.gold { color: #F5C842; }
   .rank.silver { color: #C0C0C0; }
   .rank.bronze { color: #CD7F32; }
   .entry-info { flex: 1; }
   .entry-name { font-size: 14px; font-weight: 600; }
   .entry-action { font-size: 11px; color: var(--grey); margin-top: 2px; }
-  .entry-pts {
-    font-size: 13px; font-weight: 700;
-    color: var(--blue-light);
-  }
-  .leaderboard-cta {
-    margin-top: 20px; text-align: center;
-    font-size: 12px; color: var(--grey);
-  }
-  .leaderboard-cta a {
-    color: var(--blue-light); text-decoration: none; font-weight: 600;
-  }
+  .entry-pts { font-size: 13px; font-weight: 700; color: var(--blue-light); }
+  .leaderboard-cta { margin-top: 20px; text-align: center; font-size: 12px; color: var(--grey); }
+  .leaderboard-cta a { color: var(--blue-light); text-decoration: none; font-weight: 600; }
 
-  /* ── THREE COLUMNS SECTION ── */
-  .three-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0;
-    border-top: 3px solid var(--blue-light);
-  }
-
-  .col-card {
-    padding: 48px 40px;
-    border-right: 2px solid var(--blue-light);
-  }
+  /* ── THREE COLUMNS ── */
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border-top: 3px solid var(--blue-light); }
+  .col-card { padding: 48px 40px; border-right: 2px solid var(--blue-light); }
   .col-card:last-child { border-right: none; }
-
-  .col-tag {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--blue);
-    margin-bottom: 16px;
-  }
-  .col-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px; font-weight: 700;
-    line-height: 1.2; margin-bottom: 16px;
-  }
-  .col-body {
-    font-size: 14px; line-height: 1.8; color: #444;
-  }
-  .col-link {
-    display: inline-block; margin-top: 24px;
-    font-size: 14px; font-weight: 600; color: var(--blue);
-    text-decoration: none; border-bottom: 2px solid var(--blue-light);
-    padding-bottom: 2px; transition: border-color 0.2s;
-  }
+  .col-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); margin-bottom: 16px; }
+  .col-date { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); margin-bottom: 12px; }
+  .col-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; line-height: 1.2; margin-bottom: 16px; }
+  .col-body { font-size: 14px; line-height: 1.8; color: #444; }
+  .col-link { display: inline-block; margin-top: 24px; font-size: 14px; font-weight: 600; color: var(--blue); text-decoration: none; border-bottom: 2px solid var(--blue-light); padding-bottom: 2px; transition: border-color 0.2s; }
   .col-link:hover { border-color: var(--blue); }
+  .featured-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
 
-  /* Featured Article card */
-  .featured-img {
-    width: 100%; aspect-ratio: 16/9; object-fit: cover;
-    border-radius: 12px; margin-bottom: 20px;
+  /* Read-more toggle */
+  .article-extra { display: none; margin-top: 12px; }
+  .read-toggle {
+    background: none; border: none; padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px; font-weight: 600; color: var(--blue);
+    cursor: pointer; margin-top: 16px;
+    border-bottom: 2px solid var(--blue-light); padding-bottom: 2px;
+    transition: border-color 0.2s;
   }
+  .read-toggle:hover { border-color: var(--blue); }
 
   /* Sign-up card */
   .signup-form { display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
-  .signup-form input, .signup-form select {
-    padding: 12px 16px; border: 2px solid var(--blue-light);
-    border-radius: 10px; font-family: 'DM Sans', sans-serif;
-    font-size: 14px; outline: none; background: var(--white);
-    transition: border-color 0.2s;
-  }
+  .signup-form input, .signup-form select { padding: 12px 16px; border: 2px solid var(--blue-light); border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 14px; outline: none; background: var(--white); transition: border-color 0.2s; }
   .signup-form input:focus, .signup-form select:focus { border-color: var(--blue); }
-  .signup-form button {
-    background: var(--blue); color: var(--white);
-    border: none; border-radius: 50px; padding: 14px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px; font-weight: 600; cursor: pointer;
-    transition: background 0.2s;
-  }
+  .signup-form button { background: var(--blue); color: var(--white); border: none; border-radius: 50px; padding: 14px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
   .signup-form button:hover { background: #007aaa; }
 
-  /* ── IMAGES GRID ── */
-  .images-section {
+  /* ── STORIES SECTION ── */
+  .stories-section {
     padding: 64px 48px;
-    background: var(--blue-pale);
     border-top: 3px solid var(--blue-light);
+    background: var(--white);
   }
-  .section-header {
-    text-align: center; margin-bottom: 40px;
-  }
-  .section-header h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px; font-weight: 700; margin-bottom: 10px;
-  }
+  .section-header { text-align: center; margin-bottom: 40px; }
+  .section-header h2 { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; margin-bottom: 10px; }
   .section-header p { font-size: 16px; color: #555; }
+  .stories-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .story-card {
+    border: 2px solid var(--blue-light);
+    border-radius: var(--radius);
+    padding: 36px;
+    transition: box-shadow 0.2s;
+  }
+  .story-card:hover { box-shadow: 0 8px 32px rgba(0,153,204,0.12); }
+  .story-date { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey); margin-bottom: 10px; }
+  .story-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; line-height: 1.2; margin-bottom: 14px; margin-top: 6px; }
+  .story-excerpt { font-size: 14px; line-height: 1.8; color: #444; }
+  .story-full { display: none; font-size: 14px; line-height: 1.8; color: #444; margin-top: 12px; }
+  .story-full p { margin-bottom: 14px; }
+  .story-full p:last-child { margin-bottom: 0; }
 
-  .img-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    gap: 16px;
-  }
-  .img-tile {
-    border-radius: var(--radius); overflow: hidden;
-    position: relative; aspect-ratio: 4/3;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-  }
+  /* ── IMAGES GRID ── */
+  .images-section { padding: 64px 48px; background: var(--blue-pale); border-top: 3px solid var(--blue-light); }
+  .img-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto auto; gap: 16px; }
+  .img-tile { border-radius: var(--radius); overflow: hidden; position: relative; aspect-ratio: 4/3; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform 0.2s; background: var(--blue-light); }
   .img-tile:hover { transform: scale(1.02); }
-  .img-tile img {
-    width: 100%; height: 100%; object-fit: cover;
-  }
-  .img-tile-label {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.7));
-    color: var(--white); padding: 20px 16px 12px;
-    font-size: 13px; font-weight: 600;
-  }
+  .img-tile img { width: 100%; height: 100%; object-fit: cover; }
+  .img-tile-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); color: var(--white); padding: 20px 16px 12px; font-size: 13px; font-weight: 600; }
 
   /* ── SUBMIT STORY BANNER ── */
-  .submit-banner {
-    background: var(--black);
-    color: var(--white);
-    padding: 64px 48px;
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 32px;
-  }
-  .submit-banner h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px; font-weight: 900; max-width: 520px;
-    line-height: 1.2;
-  }
+  .submit-banner { background: var(--black); color: var(--white); padding: 64px 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+  .submit-banner h2 { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900; max-width: 520px; line-height: 1.2; }
   .submit-banner h2 em { color: var(--blue-light); font-style: normal; }
-  .btn-white {
-    background: var(--white); color: var(--black);
-    padding: 16px 36px; border-radius: 50px;
-    font-size: 16px; font-weight: 700; text-decoration: none;
-    white-space: nowrap;
-    transition: background 0.15s;
-  }
+  .btn-white { background: var(--white); color: var(--black); padding: 16px 36px; border-radius: 50px; font-size: 16px; font-weight: 700; text-decoration: none; white-space: nowrap; transition: background 0.15s; }
   .btn-white:hover { background: var(--blue-light); }
 
   /* ── FOOTER ── */
-  footer {
-    background: #0f0f0f; color: #888;
-    padding: 40px 48px;
-    display: flex; justify-content: space-between; align-items: center;
-    font-size: 13px; flex-wrap: wrap; gap: 16px;
-  }
+  footer { background: #0f0f0f; color: #888; padding: 40px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; flex-wrap: wrap; gap: 16px; }
   footer a { color: var(--blue-light); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
 
   /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .hero-center > * {
-    animation: fadeUp 0.6s ease both;
-  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-center > * { animation: fadeUp 0.6s ease both; }
   .hero-center .slogan-label { animation-delay: 0.05s; }
   .hero-center .hero-headline { animation-delay: 0.15s; }
   .hero-center .hero-sub { animation-delay: 0.25s; }
@@ -336,12 +169,15 @@
 
   @media (max-width: 900px) {
     nav { padding: 0 24px; }
+    .nav-links { gap: 16px; }
     .hero { grid-template-columns: 1fr; }
     .hero-left, .hero-right { border: none; border-bottom: 2px solid var(--blue-light); }
     .three-col { grid-template-columns: 1fr; }
     .col-card { border-right: none; border-bottom: 2px solid var(--blue-light); }
     .img-grid { grid-template-columns: 1fr 1fr; }
+    .stories-grid { grid-template-columns: 1fr; }
     .submit-banner { flex-direction: column; text-align: center; }
+    .stories-section, .images-section, .submit-banner { padding: 48px 24px; }
     footer { flex-direction: column; text-align: center; }
   }
 </style>
@@ -350,7 +186,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">
+  <a href="index.html" class="nav-logo">
     <div class="nav-logo-icon">
       <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="14" cy="14" r="5" fill="#5B3FD4"/>
@@ -367,18 +203,18 @@
     <span class="nav-logo-text">MSG Teens</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#">Home</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="#">Wall of Fame</a></li>
     <li><a href="#">Blog</a></li>
     <li><a href="#">About</a></li>
+    <li><a href="submit.html">Submit a Story</a></li>
     <li><a href="#signup" class="nav-cta">Join Now</a></li>
   </ul>
 </nav>
 
-<!-- HERO (follows Joshua's layout: left panel | center | right leaderboard) -->
+<!-- HERO -->
 <section class="hero">
-
-  <!-- LEFT: Logo area + General Info -->
+  <!-- LEFT: General Info -->
   <div class="hero-left">
     <div>
       <h3>About Us</h3>
@@ -399,56 +235,39 @@
     <p class="hero-sub">Teens are changing the world, one story at a time. We showcase the real side of teenagers that adults rarely see.</p>
     <div class="hero-btns">
       <a href="#stories" class="btn-primary">Read Their Stories</a>
-      <a href="#submit" class="btn-secondary">Submit a Story</a>
+      <a href="submit.html" class="btn-secondary">Submit a Story</a>
     </div>
   </div>
 
-  <!-- RIGHT: Leaderboard Preview -->
+  <!-- RIGHT: Leaderboard -->
   <div class="hero-right">
     <h3>🏆 Leaderboard</h3>
     <p class="leaderboard-month">May 2026 · Resets monthly</p>
-
     <div class="leaderboard-entry">
       <div class="rank gold">1</div>
-      <div class="entry-info">
-        <div class="entry-name">Aaliyah M.</div>
-        <div class="entry-action">Led a food drive</div>
-      </div>
+      <div class="entry-info"><div class="entry-name">Aaliyah M.</div><div class="entry-action">Led a food drive</div></div>
       <div class="entry-pts">47 pts</div>
     </div>
     <div class="leaderboard-entry">
       <div class="rank silver">2</div>
-      <div class="entry-info">
-        <div class="entry-name">Marcus T.</div>
-        <div class="entry-action">Tutored 3 students</div>
-      </div>
+      <div class="entry-info"><div class="entry-name">Marcus T.</div><div class="entry-action">Tutored 3 students</div></div>
       <div class="entry-pts">38 pts</div>
     </div>
     <div class="leaderboard-entry">
       <div class="rank bronze">3</div>
-      <div class="entry-info">
-        <div class="entry-name">Sofia R.</div>
-        <div class="entry-action">Community mural</div>
-      </div>
+      <div class="entry-info"><div class="entry-name">Sofia R.</div><div class="entry-action">Community mural</div></div>
       <div class="entry-pts">31 pts</div>
     </div>
     <div class="leaderboard-entry">
       <div class="rank" style="font-size:15px">4</div>
-      <div class="entry-info">
-        <div class="entry-name">Darius W.</div>
-        <div class="entry-action">Helped elderly neighbor</div>
-      </div>
+      <div class="entry-info"><div class="entry-name">Darius W.</div><div class="entry-action">Helped elderly neighbor</div></div>
       <div class="entry-pts">24 pts</div>
     </div>
     <div class="leaderboard-entry">
       <div class="rank" style="font-size:15px">5</div>
-      <div class="entry-info">
-        <div class="entry-name">Priya K.</div>
-        <div class="entry-action">Organized cleanup</div>
-      </div>
+      <div class="entry-info"><div class="entry-name">Priya K.</div><div class="entry-action">Organized cleanup</div></div>
       <div class="entry-pts">19 pts</div>
     </div>
-
     <div class="leaderboard-cta">
       <p>Want to earn points? <a href="#signup">Join the challenge →</a></p>
     </div>
@@ -456,7 +275,7 @@
 </section>
 
 <!-- THREE COLUMNS: Our Story | Featured Article | Sign Up -->
-<section class="three-col" id="stories">
+<section class="three-col" id="about">
 
   <!-- OUR STORY -->
   <div class="col-card">
@@ -464,14 +283,15 @@
     <h2 class="col-title">Why we built this</h2>
     <p class="col-body">
       In 6th grade, Joshua Wright was constantly forgetting things and responding slowly. Adults assumed he was being disrespectful — but he was just overwhelmed. That moment stuck with him.<br><br>
-      Just like MSG, the food additive that was blamed for health problems for decades before science cleared its name, teenagers carry an unfair label. Most people assume the worst. MSG Teens exists to prove them wrong — one real story at a time.
+      Just like MSG, the food additive blamed for health problems for decades before science cleared its name, teenagers carry an unfair label. Most people assume the worst. MSG Teens exists to prove them wrong — one real story at a time.
     </p>
-    <a href="#" class="col-link">Read Joshua's full story →</a>
+    <a href="#stories" class="col-link">Read our stories →</a>
   </div>
 
-  <!-- FEATURED ARTICLE -->
+  <!-- FEATURED ARTICLE: Gitanjali -->
   <div class="col-card">
     <p class="col-tag">Featured Article</p>
+    <p class="col-date">May 12, 2026</p>
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Gitanjali_Rao_TIME_Kid_of_the_Year.jpg/440px-Gitanjali_Rao_TIME_Kid_of_the_Year.jpg"
       alt="Gitanjali Rao, TIME Kid of the Year"
@@ -480,9 +300,20 @@
     >
     <h2 class="col-title">Gitanjali Rao: The Teen Who Detected Lead in Water</h2>
     <p class="col-body">
-      At 11 years old, she invented Tethys — a device to detect lead in drinking water — after learning about the Flint Water Crisis. She then built Kindly, an AI app to detect cyberbullying. TIME named her their first-ever Kid of the Year. Today she studies at MIT.
+      Gitanjali Rao is a young scientist and inventor who has changed the world with her creative, real-world thinking. Since she was a young girl, she showed a strong interest in science and how it can be used to help other people.
     </p>
-    <a href="#" class="col-link">Read the full article →</a>
+    <div class="article-extra" id="gitanjaliExtra">
+      <p class="col-body" style="margin-top:14px">
+        One of her most important inventions is a device that detects lead in drinking water. She created it after learning about the Flint Water Crisis, where a change in the city's water source exposed around 100,000 residents to unsafe water. Lead is especially dangerous because it can damage the brain and nervous system, particularly in children. Gitanjali designed a device called Tethys that uses new technology to quickly detect lead.
+      </p>
+      <p class="col-body" style="margin-top:14px">
+        She also created an app called Kindly, which uses artificial intelligence to detect cyberbullying. Studies show that a large percentage of teens experience online harassment, and Kindly helps by analyzing messages and warning users before harmful content is sent.
+      </p>
+      <p class="col-body" style="margin-top:14px">
+        Gitanjali's achievements include being named TIME's Kid of the Year, giving a TED Talk, and receiving recognition from major science organizations. Today she attends MIT, where she continues developing new ideas to solve global problems. She believes that anyone, no matter their age, can make a difference if they stay curious and keep trying.
+      </p>
+    </div>
+    <button class="read-toggle" onclick="toggleArticle('gitanjaliExtra', this)">Read more →</button>
   </div>
 
   <!-- SIGN UP -->
@@ -507,7 +338,45 @@
   </div>
 </section>
 
-<!-- TEEN IMAGES GALLERY (using Joshua's 6 uploaded photos) -->
+<!-- STORIES FROM REAL TEENS -->
+<section class="stories-section" id="stories">
+  <div class="section-header">
+    <h2>Stories from Real Teens</h2>
+    <p>Every story here is real. Every person deserves to be understood.</p>
+  </div>
+  <div class="stories-grid">
+
+    <!-- Ben's Story -->
+    <article class="story-card">
+      <p class="story-date">May 12, 2026</p>
+      <p class="col-tag" style="margin-bottom:0">Student Story</p>
+      <h3 class="story-title">Ben: More Than a Label</h3>
+      <p class="story-excerpt">
+        Ben is a student whose story shows that behavior does not always tell the full story about a person. Often sitting at the edge of his seat, tapping his pencil, looking around the room — adults saw disruption. But Ben was just trying his best.
+      </p>
+      <a href="ben.html" class="col-link">Read Ben's full story →</a>
+    </article>
+
+    <!-- Joshua's Personal Story -->
+    <article class="story-card">
+      <p class="story-date">May 26, 2026</p>
+      <p class="col-tag" style="margin-bottom:0">Personal Story</p>
+      <h3 class="story-title">A Moment at Home</h3>
+      <p class="story-excerpt">
+        At home, my parent asked me to do some chores, but I didn't answer right away and stayed on my phone for a minute. Right away, they got frustrated and said I was being disrespectful and not listening.
+      </p>
+      <div class="story-full" id="joshuaStory">
+        <p>From their point of view, it looked like I was ignoring them and choosing not to help, which made the situation worse quickly. They assumed that I didn't care and that I was just being lazy or difficult on purpose. It seemed like I was choosing my phone over responsibility, and that I wasn't respecting what they asked me to do.</p>
+        <p>That assumption turned a small moment into a bigger problem because it felt like they had already decided what kind of person I was at that moment.</p>
+        <p>But the truth is, I wasn't trying to be disrespectful at all. I had a lot on my mind and felt overwhelmed, so I didn't respond right away. I was going to help — I just needed a second to process and shift my focus. What they didn't see was that I wasn't refusing. I just needed a little time and understanding, not to be judged right away.</p>
+      </div>
+      <button class="read-toggle" onclick="toggleArticle('joshuaStory', this)">Read more →</button>
+    </article>
+
+  </div>
+</section>
+
+<!-- TEEN IMAGES GALLERY -->
 <section class="images-section" id="gallery">
   <div class="section-header">
     <h2>Teens in Action</h2>
@@ -515,27 +384,27 @@
   </div>
   <div class="img-grid">
     <div class="img-tile">
-      <img src="teen1.jpg" alt="Teen volunteers collecting trash" onerror="this.parentElement.style.background='#A3CEF1'">
+      <img src="teen1.jpg" alt="Teen volunteers collecting trash" onerror="this.style.display='none'">
       <div class="img-tile-label">Community Cleanup</div>
     </div>
     <div class="img-tile">
-      <img src="teen2.jpg" alt="Teens doing park work" onerror="this.parentElement.style.background='#0099CC'">
+      <img src="teen2.jpg" alt="Teens doing park work" onerror="this.style.display='none'">
       <div class="img-tile-label">Park Restoration</div>
     </div>
     <div class="img-tile">
-      <img src="teen3.jpg" alt="Teens gardening" onerror="this.parentElement.style.background='#A3CEF1'">
+      <img src="teen3.jpg" alt="Teens gardening" onerror="this.style.display='none'">
       <div class="img-tile-label">Urban Gardening</div>
     </div>
     <div class="img-tile">
-      <img src="teen4.jpg" alt="Teens serving food" onerror="this.parentElement.style.background='#0099CC'">
+      <img src="teen4.jpg" alt="Teens serving food" onerror="this.style.display='none'">
       <div class="img-tile-label">Food Service Volunteer</div>
     </div>
     <div class="img-tile">
-      <img src="teen5.jpg" alt="Teens at food drive" onerror="this.parentElement.style.background='#A3CEF1'">
+      <img src="teen5.jpg" alt="Teens at food drive" onerror="this.style.display='none'">
       <div class="img-tile-label">Local Food Drive</div>
     </div>
     <div class="img-tile">
-      <img src="teen6.jpg" alt="Teen painting mural" onerror="this.parentElement.style.background='#0099CC'">
+      <img src="teen6.jpg" alt="Teen painting mural" onerror="this.style.display='none'">
       <div class="img-tile-label">Community Mural</div>
     </div>
   </div>
@@ -544,7 +413,7 @@
 <!-- SUBMIT STORY BANNER -->
 <section class="submit-banner" id="submit">
   <h2>Know a teen doing something <em>incredible?</em><br>Their story belongs here.</h2>
-  <a href="#" class="btn-white">Submit a Story →</a>
+  <a href="submit.html" class="btn-white">Submit a Story →</a>
 </section>
 
 <!-- FOOTER -->
@@ -554,10 +423,10 @@
     <span>Founded by Joshua Wright · Central Catholic · Pittsburgh, PA</span>
   </div>
   <div style="display:flex;gap:24px;flex-wrap:wrap">
-    <a href="#">Home</a>
+    <a href="index.html">Home</a>
     <a href="#">Wall of Fame</a>
     <a href="#">Blog</a>
-    <a href="#">Submit a Story</a>
+    <a href="submit.html">Submit a Story</a>
     <a href="#">About</a>
     <a href="#">Contact</a>
   </div>
@@ -565,12 +434,12 @@
 </footer>
 
 <script>
+  // Sign-up form
   document.getElementById('signupForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = this.querySelector('button');
     btn.textContent = 'Saving...';
     btn.disabled = true;
-
     const entry = {
       name: document.getElementById('name').value,
       email: document.getElementById('email').value,
@@ -578,7 +447,6 @@
       role: document.getElementById('role').value,
       joinedAt: new Date().toISOString()
     };
-
     try {
       const res = await fetch('/api/signup', {
         method: 'POST',
@@ -592,14 +460,20 @@
         alert('Something went wrong. Try again!');
       }
     } catch {
-      // If backend isn't running, still show success in preview
       document.getElementById('formMsg').style.display = 'block';
       this.reset();
     }
-
     btn.textContent = 'Join MSG Teens →';
     btn.disabled = false;
   });
+
+  // Read-more toggle
+  function toggleArticle(id, btn) {
+    const el = document.getElementById(id);
+    const isHidden = el.style.display === 'none' || el.style.display === '';
+    el.style.display = isHidden ? 'block' : 'none';
+    btn.textContent = isHidden ? 'Read less ↑' : 'Read more →';
+  }
 </script>
 </body>
 </html>

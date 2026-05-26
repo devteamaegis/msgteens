@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ben's Story — MSG Teens</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #0099CC;
+    --blue-light: #A3CEF1;
+    --blue-pale: #EBF6FC;
+    --black: #111111;
+    --grey: #8B8C89;
+    --white: #FFFFFF;
+    --radius: 16px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--black); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--white); border-bottom: 2px solid var(--blue-light);
+    padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 72px;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .nav-logo-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; }
+  .nav-logo-icon svg { width: 28px; height: 28px; }
+  .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--black); }
+  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+  .nav-links a { text-decoration: none; font-size: 14px; font-weight: 500; color: var(--black); letter-spacing: 0.03em; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--blue); }
+  .nav-cta { background: var(--blue); color: var(--white) !important; padding: 10px 22px; border-radius: 50px; font-weight: 600 !important; }
+  .nav-cta:hover { background: #007aaa !important; color: var(--white) !important; }
+
+  /* ARTICLE HERO */
+  .article-hero {
+    background: var(--blue-pale);
+    border-bottom: 3px solid var(--blue-light);
+    padding: 72px 48px 56px;
+    max-width: 860px; margin: 0 auto;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 600; color: var(--blue);
+    text-decoration: none; margin-bottom: 32px;
+    letter-spacing: 0.04em;
+  }
+  .back-link:hover { opacity: 0.75; }
+  .article-tag {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--blue); margin-bottom: 16px;
+  }
+  .article-date {
+    font-size: 12px; color: var(--grey); font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .article-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 52px); font-weight: 900;
+    line-height: 1.1; margin-bottom: 20px; color: var(--black);
+  }
+  .article-headline em { color: var(--blue); font-style: normal; }
+  .article-deck {
+    font-size: 18px; line-height: 1.7; color: #555; max-width: 620px;
+  }
+
+  /* ARTICLE BODY */
+  .article-body {
+    max-width: 860px; margin: 0 auto;
+    padding: 56px 48px 80px;
+  }
+  .article-body p {
+    font-size: 16px; line-height: 1.85; color: #333;
+    margin-bottom: 24px;
+  }
+  .article-body p:last-child { margin-bottom: 0; }
+  .article-quote {
+    border-left: 4px solid var(--blue);
+    padding: 20px 28px;
+    margin: 36px 0;
+    background: var(--blue-pale);
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+  .article-quote p {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; font-style: italic; color: var(--black);
+    margin: 0; line-height: 1.5;
+  }
+
+  /* BACK TO STORIES */
+  .back-banner {
+    background: var(--black); color: var(--white);
+    padding: 48px; text-align: center;
+  }
+  .back-banner h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px; margin-bottom: 20px;
+  }
+  .back-banner h3 em { color: var(--blue-light); font-style: normal; }
+  .btn-white {
+    background: var(--white); color: var(--black);
+    padding: 14px 32px; border-radius: 50px;
+    font-size: 15px; font-weight: 700; text-decoration: none;
+    display: inline-block; transition: background 0.15s;
+  }
+  .btn-white:hover { background: var(--blue-light); }
+
+  /* FOOTER */
+  footer {
+    background: #0f0f0f; color: #888;
+    padding: 40px 48px; display: flex; justify-content: space-between;
+    align-items: center; font-size: 13px; flex-wrap: wrap; gap: 16px;
+  }
+  footer a { color: var(--blue-light); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 24px; }
+    .article-hero, .article-body { padding-left: 24px; padding-right: 24px; }
+    .back-banner { padding: 40px 24px; }
+    footer { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="5" fill="#5B3FD4"/>
+        <circle cx="4" cy="8" r="2.5" fill="#5B3FD4" opacity="0.6"/>
+        <circle cx="24" cy="8" r="2.5" fill="#5B3FD4" opacity="0.6"/>
+        <circle cx="4" cy="20" r="2.5" fill="#5B3FD4" opacity="0.6"/>
+        <circle cx="24" cy="20" r="2.5" fill="#5B3FD4" opacity="0.6"/>
+        <line x1="9" y1="11" x2="6" y2="9.5" stroke="#5B3FD4" stroke-width="1.5" stroke-dasharray="2 2"/>
+        <line x1="19" y1="11" x2="22" y2="9.5" stroke="#5B3FD4" stroke-width="1.5" stroke-dasharray="2 2"/>
+        <line x1="9" y1="17" x2="6" y2="18.5" stroke="#5B3FD4" stroke-width="1.5" stroke-dasharray="2 2"/>
+        <line x1="19" y1="17" x2="22" y2="18.5" stroke="#5B3FD4" stroke-width="1.5" stroke-dasharray="2 2"/>
+      </svg>
+    </div>
+    <span class="nav-logo-text">MSG Teens</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#">Wall of Fame</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="submit.html">Submit a Story</a></li>
+    <li><a href="index.html#signup" class="nav-cta">Join Now</a></li>
+  </ul>
+</nav>
+
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+  <a href="index.html#stories" class="back-link">← Back to Stories</a>
+  <p class="article-tag">Student Story</p>
+  <p class="article-date">May 12, 2026</p>
+  <h1 class="article-headline">Ben: <em>More Than a Label</em></h1>
+  <p class="article-deck">A student whose behavior looked like defiance — but told a very different story up close.</p>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+  <p>
+    Ben is a young student whose story shows that behavior does not always tell the full story about a person. He can be imagined as a short boy with curly hair, often sitting at the edge of his seat, tapping his pencil or looking around the room while others work. Ben is not a "bad kid," but a student who learns and reacts differently, especially in a structured classroom where expectations can feel overwhelming.
+  </p>
+
+  <p>
+    At school, he often got into trouble for not paying attention, calling out, or struggling to follow directions. For example, a teacher might stop the class and say, "Ben, you need to sit still and focus," without realizing that he was already trying his best. In those moments, Ben would feel embarrassed and frustrated, which sometimes made his behavior worse instead of better. Because of this, many people quickly labeled him as a "bad kid." However, this label did not reflect who Ben really was or what he was going through.
+  </p>
+
+  <div class="article-quote">
+    <p>"Many people quickly labeled him as a 'bad kid.' However, this label did not reflect who Ben really was or what he was going through."</p>
+  </div>
+
+  <p>
+    In reality, Ben was misunderstood. He had difficulties that made learning and focusing in a typical classroom challenging. Instead of receiving immediate understanding, his actions were often judged without looking deeper. This made school even more frustrating for him and affected how others treated him.
+  </p>
+
+  <p>
+    When teachers and adults began to take the time to understand Ben, things started to change. They looked beyond his behavior and recognized that he needed support, patience, and different strategies to help him succeed. As a result, Ben began to improve. He felt more comfortable, more confident, and more willing to try.
+  </p>
+
+  <p>
+    Ben's story shows how important it is to look beyond first impressions. Every child has their own challenges and strengths, and behavior is often a sign of something deeper. With understanding and support, students like Ben can grow and succeed.
+  </p>
+</div>
+
+<!-- BACK BANNER -->
+<div class="back-banner">
+  <h3>Know a teen with a story like <em>Ben's?</em></h3>
+  <a href="submit.html" class="btn-white">Submit Their Story →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <strong style="color:var(--white)">MSG Teens</strong> &nbsp;·&nbsp; msgteens.com<br>
+    <span>Founded by Joshua Wright · Central Catholic · Pittsburgh, PA</span>
+  </div>
+  <div style="display:flex;gap:24px;flex-wrap:wrap">
+    <a href="index.html">Home</a>
+    <a href="#">Wall of Fame</a>
+    <a href="#">Blog</a>
+    <a href="submit.html">Submit a Story</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+  <div style="font-size:12px">© 2026 MSG Teens. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
