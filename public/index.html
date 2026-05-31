@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MSG Teens — Misunderstood. Just like MSG.</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23A3CEF1'/><text x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-weight='900' font-size='20' fill='%230099CC'>M</text></svg>">
+<meta name="description" content="Teens are changing the world, one story at a time. MSG Teens showcases the real side of teenagers that adults rarely see.">
+<meta property="og:title" content="MSG Teens — Misunderstood. Just like MSG.">
+<meta property="og:description" content="Teens are changing the world, one story at a time. MSG Teens showcases the real side of teenagers that adults rarely see.">
+<meta property="og:url" content="https://msgteens.com">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://msgteens.com/teen1.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -17,6 +25,7 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
 
   body {
     font-family: 'DM Sans', sans-serif;
@@ -204,9 +213,9 @@
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="#">Wall of Fame</a></li>
+    <li><a href="wall-of-fame.html">Wall of Fame</a></li>
     <li><a href="#">Blog</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="submit.html">Submit a Story</a></li>
     <li><a href="#signup" class="nav-cta">Join Now</a></li>
   </ul>
@@ -424,45 +433,45 @@
   </div>
   <div style="display:flex;gap:24px;flex-wrap:wrap">
     <a href="index.html">Home</a>
-    <a href="#">Wall of Fame</a>
+    <a href="wall-of-fame.html">Wall of Fame</a>
     <a href="#">Blog</a>
     <a href="submit.html">Submit a Story</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="about.html">About</a>
   </div>
   <div style="font-size:12px">© 2026 MSG Teens. All rights reserved.</div>
 </footer>
 
 <script>
-  // Sign-up form
+  // ── Google Sheets signup ─────────────────────────────────
+  // Replace the URL below with your Google Apps Script Web App URL.
+  // Setup: Extensions → Apps Script → paste the doPost code → Deploy → Web App → Anyone → Copy URL
+  const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
   document.getElementById('signupForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = this.querySelector('button');
     btn.textContent = 'Saving...';
     btn.disabled = true;
     const entry = {
-      name: document.getElementById('name').value,
-      email: document.getElementById('email').value,
+      name:   document.getElementById('name').value,
+      email:  document.getElementById('email').value,
       school: document.getElementById('school').value,
-      role: document.getElementById('role').value,
-      joinedAt: new Date().toISOString()
+      role:   document.getElementById('role').value
     };
     try {
-      const res = await fetch('/api/signup', {
+      // mode: no-cors is required for Apps Script — we can't read the response,
+      // so we optimistically show success after the request fires.
+      await fetch(SHEET_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(entry)
       });
-      if (res.ok) {
-        document.getElementById('formMsg').style.display = 'block';
-        this.reset();
-      } else {
-        alert('Something went wrong. Try again!');
-      }
-    } catch {
-      document.getElementById('formMsg').style.display = 'block';
-      this.reset();
+    } catch(err) {
+      console.warn('Signup fetch error:', err);
     }
+    document.getElementById('formMsg').style.display = 'block';
+    this.reset();
     btn.textContent = 'Join MSG Teens →';
     btn.disabled = false;
   });

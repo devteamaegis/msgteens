@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — MSG Teens</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23A3CEF1'/><text x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-weight='900' font-size='20' fill='%230099CC'>M</text></svg>">
+<meta name="description" content="MSG Teens was founded by Joshua Wright, an 8th grader in Pittsburgh who believes teenagers deserve better than the labels adults give them.">
+<meta property="og:title" content="About MSG Teens">
+<meta property="og:description" content="A movement started by one 8th grader to change how adults see teenagers.">
+<meta property="og:url" content="https://msgteens.com/about.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://msgteens.com/teen1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #0099CC;
+    --blue-light: #A3CEF1;
+    --blue-pale: #EBF6FC;
+    --black: #111111;
+    --grey: #8B8C89;
+    --white: #FFFFFF;
+    --radius: 16px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--black); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--white); border-bottom: 2px solid var(--blue-light);
+    padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 72px;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .nav-logo-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; }
+  .nav-logo-icon svg { width: 28px; height: 28px; }
+  .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--black); }
+  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+  .nav-links a { text-decoration: none; font-size: 14px; font-weight: 500; color: var(--black); letter-spacing: 0.03em; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--blue); }
+  .nav-cta { background: var(--blue); color: var(--white) !important; padding: 10px 22px; border-radius: 50px; font-weight: 600 !important; }
+  .nav-cta:hover { background: #007aaa !important; }
+
+  /* HERO */
+  .about-hero {
+    background: var(--black); color: var(--white);
+    padding: 80px 48px 64px; text-align: center;
+    border-bottom: 3px solid #222;
+  }
+  .about-hero .tag {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--blue-light); margin-bottom: 20px;
+  }
+  .about-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 5vw, 56px); font-weight: 900;
+    line-height: 1.1; margin-bottom: 20px;
+  }
+  .about-hero h1 em { color: var(--blue-light); font-style: normal; }
+  .about-hero p { font-size: 18px; color: #aaa; max-width: 560px; margin: 0 auto; line-height: 1.7; }
+
+  /* SECTIONS */
+  .section { max-width: 860px; margin: 0 auto; padding: 72px 48px; }
+  .section + .section { padding-top: 0; }
+  .section-tag {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--blue); margin-bottom: 14px;
+  }
+  .section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 4vw, 40px); font-weight: 900;
+    line-height: 1.15; margin-bottom: 24px; color: var(--black);
+  }
+  .section h2 em { color: var(--blue); font-style: normal; }
+  .section p {
+    font-size: 16px; line-height: 1.85; color: #333; margin-bottom: 20px;
+  }
+  .section p:last-child { margin-bottom: 0; }
+
+  /* DIVIDER */
+  .section-divider {
+    border: none; border-top: 2px solid var(--blue-light);
+    margin: 0 48px;
+  }
+
+  /* PULLQUOTE */
+  .pullquote {
+    border-left: 4px solid var(--blue);
+    padding: 20px 28px;
+    margin: 32px 0;
+    background: var(--blue-pale);
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+  .pullquote p {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; font-style: italic; color: var(--black);
+    line-height: 1.5; margin: 0;
+  }
+
+  /* MSG EXPLAINER STRIP */
+  .msg-strip {
+    background: var(--blue-pale);
+    border-top: 3px solid var(--blue-light);
+    border-bottom: 3px solid var(--blue-light);
+    padding: 56px 48px;
+  }
+  .msg-strip-inner { max-width: 860px; margin: 0 auto; }
+  .msg-strip h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 3.5vw, 36px); font-weight: 900;
+    margin-bottom: 20px; color: var(--black);
+  }
+  .msg-strip h2 em { color: var(--blue); font-style: normal; }
+  .msg-strip p { font-size: 16px; line-height: 1.85; color: #333; margin-bottom: 16px; }
+  .msg-strip p:last-child { margin-bottom: 0; }
+  .fact-row {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 24px; margin-top: 36px;
+  }
+  .fact-card {
+    background: var(--white);
+    border: 2px solid var(--blue-light);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+  }
+  .fact-card .label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--grey); margin-bottom: 10px;
+  }
+  .fact-card p { font-size: 14px; line-height: 1.7; color: #444; margin: 0; }
+
+  /* MISSION CARDS */
+  .mission-cards {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    margin-top: 36px;
+  }
+  .mission-card {
+    border: 2px solid var(--blue-light);
+    border-radius: var(--radius);
+    padding: 28px 24px; text-align: center;
+  }
+  .mission-icon { font-size: 32px; margin-bottom: 14px; }
+  .mission-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px; font-weight: 700; margin-bottom: 10px;
+  }
+  .mission-card p { font-size: 13px; line-height: 1.7; color: #555; margin: 0; }
+
+  /* CTA BANNER */
+  .cta-banner {
+    background: var(--black); color: var(--white);
+    padding: 64px 48px; text-align: center;
+  }
+  .cta-banner h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px; font-weight: 900; margin-bottom: 12px;
+  }
+  .cta-banner h3 em { color: var(--blue-light); font-style: normal; }
+  .cta-banner p { font-size: 16px; color: #aaa; margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+  .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-blue { background: var(--blue); color: var(--white); padding: 14px 32px; border-radius: 50px; font-size: 15px; font-weight: 600; text-decoration: none; transition: background 0.15s; }
+  .btn-blue:hover { background: #007aaa; }
+  .btn-outline { border: 2px solid #555; color: #ccc; padding: 12px 28px; border-radius: 50px; font-size: 15px; font-weight: 600; text-decoration: none; transition: border-color 0.15s, color 0.15s; }
+  .btn-outline:hover { border-color: var(--blue-light); color: var(--white); }
+
+  /* FOOTER */
+  footer {
+    background: #0f0f0f; color: #888;
+    padding: 40px 48px; display: flex; justify-content: space-between;
+    align-items: center; font-size: 13px; flex-wrap: wrap; gap: 16px;
+  }
+  footer a { color: var(--blue-light); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 24px; }
+    .about-hero { padding: 56px 24px 48px; }
+    .section { padding: 48px 24px; }
+    .section-divider { margin: 0 24px; }
+    .msg-strip { padding: 48px 24px; }
+    .fact-row { grid-template-columns: 1fr; }
+    .mission-cards { grid-template-columns: 1fr; }
+    .cta-banner { padding: 48px 24px; }
+    footer { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="5" fill="#5B3FD4"/>
+        <circle cx="4" cy="8" r="2.5" fill="#5B3FD4" opacity="0.6"/>
+        <circle cx="24" cy="8" r="2.5" fill="#5B3FD4" opacity="0.6"/>
+        <circle cx="4" cy="20" r="2.5" fill="#5B3FD4" opacity="0.6"/>
+        <circle cx="24" cy="20" r="2.5" fill="#5B3FD4" opacity="0.6"/>
+        <line x1="9" y1="11" x2="6" y2="9.5" stroke="#5B3FD4" stroke-width="1.5" stroke-dasharray="2 2"/>
+        <line x1="19" y1="11" x2="22" y2="9.5" stroke="#5B3FD4" stroke-width="1.5" stroke-dasharray="2 2"/>
+        <line x1="9" y1="17" x2="6" y2="18.5" stroke="#5B3FD4" stroke-width="1.5" stroke-dasharray="2 2"/>
+        <line x1="19" y1="17" x2="22" y2="18.5" stroke="#5B3FD4" stroke-width="1.5" stroke-dasharray="2 2"/>
+      </svg>
+    </div>
+    <span class="nav-logo-text">MSG Teens</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="wall-of-fame.html">Wall of Fame</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="about.html" style="color:var(--blue);font-weight:600">About</a></li>
+    <li><a href="submit.html">Submit a Story</a></li>
+    <li><a href="index.html#signup" class="nav-cta">Join Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="about-hero">
+  <p class="tag">About MSG Teens</p>
+  <h1>A movement started by<br><em>one 8th grader.</em></h1>
+  <p>Joshua Wright got tired of being misunderstood. So he built a platform to prove that teenagers deserve more credit than they get.</p>
+</div>
+
+<!-- JOSHUA'S STORY -->
+<div class="section">
+  <p class="section-tag">The Founder</p>
+  <h2>Joshua's story: the moment that started it all</h2>
+  <p>
+    In 6th grade, Joshua Wright was going through a lot. Between school pressure, distractions, and an overwhelming mental load, he found himself forgetting things and responding slowly. A teacher stopped class and pointed it out in front of everyone — not to help, but to correct. Adults assumed he was being disrespectful. But he was just overwhelmed.
+  </p>
+  <p>
+    That moment stuck with him. Not because it was the worst thing that ever happened, but because it was so ordinary. It wasn't a dramatic injustice — it was just a teenager being misread by an adult who stopped at the surface and didn't look deeper.
+  </p>
+
+  <div class="pullquote">
+    <p>"I wasn't trying to be disrespectful. I just needed a second to process. But the decision had already been made about what kind of person I was."</p>
+  </div>
+
+  <p>
+    That experience planted a question: how many teens are going through something similar every single day, getting labeled before anyone bothers to understand them? How many "problem kids" are really just overwhelmed, anxious, or processing things differently?
+  </p>
+  <p>
+    Two years later, Joshua is an 8th grader at Central Catholic in Pittsburgh, PA — and he's doing something about it. MSG Teens is his answer: a platform for stories that flip the script on how adults see teenagers.
+  </p>
+</div>
+
+<hr class="section-divider">
+
+<!-- THE MSG ANALOGY -->
+<div class="msg-strip">
+  <div class="msg-strip-inner">
+    <p class="section-tag" style="font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--blue);margin-bottom:14px">The Analogy</p>
+    <h2>Why <em>MSG?</em> The story behind the name.</h2>
+    <p>
+      MSG — monosodium glutamate — is a flavor enhancer that's been used in cooking for over a century. It's naturally found in tomatoes, aged cheese, and soy sauce. It's safe, effective, and used by chefs worldwide. But starting in 1968, a single letter published in a medical journal blamed it for headaches and nausea after eating Chinese food.
+    </p>
+    <p>
+      The label stuck. For decades, "No MSG" became a marketing badge. Restaurants plastered it on menus. Parents avoided it. MSG became synonymous with something harmful — even as study after study found no credible link between MSG and the reported symptoms. The FDA classifies MSG as "generally recognized as safe." The science was always there. But the narrative was stronger.
+    </p>
+    <p>
+      <strong>Teenagers carry the same unfair label.</strong> Lazy. Disrespectful. Distracted. Ungrateful. Adults decided the story a long time ago — and like MSG, the real truth gets buried under the assumption.
+    </p>
+    <p>
+      MSG Teens exists to clear the name. One real story at a time.
+    </p>
+
+    <div class="fact-row">
+      <div class="fact-card">
+        <p class="label">MSG — The food</p>
+        <p>Blamed without evidence in 1968. Studied for 50+ years. FDA classified as safe. Still carries stigma today because the narrative was easier to spread than the facts.</p>
+      </div>
+      <div class="fact-card">
+        <p class="label">Teenagers — The people</p>
+        <p>Labeled as difficult, apathetic, and unreliable. Meanwhile, teens are inventing technology, running food drives, tutoring peers, and building communities adults wouldn't think to start.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MISSION -->
+<div class="section">
+  <p class="section-tag">Our Mission</p>
+  <h2>What we're actually <em>doing</em> about it</h2>
+  <p>
+    MSG Teens is built around a simple idea: if adults could read the real stories of teenagers — not the headlines, not the stereotypes, but the actual human moments — they'd change their minds. So we collect those stories. We publish them. We share them.
+  </p>
+  <p>
+    Every story on this site is reviewed before it's published. Every teen we feature has consented to being shared. And every piece of content is written to show adults the fuller picture they're missing.
+  </p>
+
+  <div class="mission-cards">
+    <div class="mission-card">
+      <div class="mission-icon">📖</div>
+      <h3>Real Stories</h3>
+      <p>Teens submit their own experiences or nominate others. We review, edit, and publish stories that show depth adults rarely see.</p>
+    </div>
+    <div class="mission-card">
+      <div class="mission-icon">🏆</div>
+      <h3>Recognition</h3>
+      <p>Teens earn points for positive actions. The monthly leaderboard puts their good work front and center, where it belongs.</p>
+    </div>
+    <div class="mission-card">
+      <div class="mission-icon">🌍</div>
+      <h3>Community</h3>
+      <p>Parents, teachers, and teens join together. The goal isn't to divide — it's to build bridges through honest storytelling.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <h3>Be part of the <em>proof.</em></h3>
+  <p>Whether you're a teen with a story or an adult ready to listen — there's a place for you here.</p>
+  <div class="cta-row">
+    <a href="submit.html" class="btn-blue">Submit a Story →</a>
+    <a href="index.html#signup" class="btn-outline">Join the Community</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <strong style="color:var(--white)">MSG Teens</strong> &nbsp;·&nbsp; msgteens.com<br>
+    <span>Founded by Joshua Wright · Central Catholic · Pittsburgh, PA</span>
+  </div>
+  <div style="display:flex;gap:24px;flex-wrap:wrap">
+    <a href="index.html">Home</a>
+    <a href="wall-of-fame.html">Wall of Fame</a>
+    <a href="#">Blog</a>
+    <a href="submit.html">Submit a Story</a>
+    <a href="about.html">About</a>
+  </div>
+  <div style="font-size:12px">© 2026 MSG Teens. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
