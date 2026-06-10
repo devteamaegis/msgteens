@@ -125,8 +125,29 @@
   footer a { color: var(--blue-light); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
 
+  /* SHARE ROW */
+  .share-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 24px 0; border-top: 2px solid var(--blue-pale); margin-top: 48px; }
+  .share-label { font-size: 13px; font-weight: 600; color: var(--grey); }
+  .share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: 50px; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.15s, color 0.15s; border: 2px solid var(--blue-light); background: var(--white); color: var(--black); }
+  .share-btn:hover { background: var(--blue-pale); border-color: var(--blue); }
+  .share-btn.twitter { background: var(--black); color: var(--white); border-color: var(--black); }
+  .share-btn.twitter:hover { background: #222; }
+
+  /* HAMBURGER */
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; border: none; background: none; }
+  .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
   @media (max-width: 768px) {
-    nav { padding: 0 24px; }
+    nav { padding: 0 24px; position: relative; }
+    .nav-hamburger { display: flex; }
+    .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 72px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--blue-light); padding: 8px 24px 20px; z-index: 100; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .nav-links.open { display: flex; }
+    .nav-links li { border-bottom: 1px solid var(--blue-pale); }
+    .nav-links a { display: block; padding: 12px 0; font-size: 16px; }
+    .nav-cta { margin-top: 8px; text-align: center; }
     .article-hero, .article-body { padding-left: 24px; padding-right: 24px; }
     .back-banner { padding: 40px 24px; }
     footer { flex-direction: column; text-align: center; }
@@ -161,6 +182,9 @@
     <li><a href="submit.html">Submit a Story</a></li>
     <li><a href="index.html#signup" class="nav-cta">Join Now</a></li>
   </ul>
+  <button class="nav-hamburger" aria-label="Open navigation" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- ARTICLE HERO -->
@@ -197,6 +221,14 @@
   <p>
     Ben's story shows how important it is to look beyond first impressions. Every child has their own challenges and strengths, and behavior is often a sign of something deeper. With understanding and support, students like Ben can grow and succeed.
   </p>
+
+  <!-- SHARE ROW -->
+  <div class="share-row">
+    <span class="share-label">Share this story:</span>
+    <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
+    <a class="share-btn twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmsgteens.com%2Fben.html&text=This%20student%20was%20labeled%20a%20%22bad%20kid.%22%20His%20real%20story%20is%20different.%20%E2%80%94%20via%20%40msgteens" target="_blank" rel="noopener">𝕏 Share</a>
+  </div>
+
 </div>
 
 <!-- BACK BANNER -->
@@ -221,5 +253,16 @@
   <div style="font-size:12px">© 2026 MSG Teens. All rights reserved.</div>
 </footer>
 
+<script>
+  function copyLink(btn) {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => btn.textContent = '🔗 Copy Link', 2000);
+    }).catch(() => {
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => btn.textContent = '🔗 Copy Link', 2000);
+    });
+  }
+</script>
 </body>
 </html>

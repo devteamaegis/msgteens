@@ -42,6 +42,11 @@
   .nav-links a:hover { color: var(--blue); }
   .nav-cta { background: var(--blue); color: var(--white) !important; padding: 10px 22px; border-radius: 50px; font-weight: 600 !important; }
   .nav-cta:hover { background: #007aaa !important; }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; border: none; background: none; }
+  .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
   /* HERO */
   .wof-hero {
@@ -193,6 +198,16 @@
   footer a { color: var(--blue-light); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
 
+  @media (max-width: 768px) {
+    nav { padding: 0 24px; position: relative; }
+    .nav-hamburger { display: flex; }
+    .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 72px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--blue-light); padding: 8px 24px 20px; z-index: 100; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .nav-links.open { display: flex; }
+    .nav-links li { border-bottom: 1px solid var(--blue-pale); }
+    .nav-links a { display: block; padding: 12px 0; font-size: 16px; }
+    .nav-cta { margin-top: 8px; text-align: center; }
+  }
+
   @media (max-width: 900px) {
     nav { padding: 0 24px; }
     .wof-hero { padding: 56px 24px 48px; }
@@ -236,6 +251,9 @@
     <li><a href="submit.html">Submit a Story</a></li>
     <li><a href="index.html#signup" class="nav-cta">Join Now</a></li>
   </ul>
+  <button class="nav-hamburger" aria-label="Open navigation" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -285,7 +303,7 @@
         <p class="wof-desc">
           At 11 years old, Gitanjali invented Tethys — a device to detect lead in drinking water — after reading about the Flint water crisis. She went on to create Kindly, an AI-powered app that detects cyberbullying, and was named TIME's Kid of the Year. She now attends MIT. Every adult who doubted her was wrong.
         </p>
-        <a href="index.html#about" class="wof-link">Read her story →</a>
+        <a href="gitanjali.html" class="wof-link">Read her full story →</a>
       </div>
     </article>
 

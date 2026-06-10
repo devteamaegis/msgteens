@@ -176,6 +176,50 @@
   .hero-center .hero-sub { animation-delay: 0.25s; }
   .hero-center .hero-btns { animation-delay: 0.35s; }
 
+  /* STATS STRIP */
+  .stats-strip {
+    display: flex; align-items: center; justify-content: center;
+    flex-wrap: wrap; gap: 0;
+    background: var(--black);
+    border-bottom: 3px solid #222;
+    padding: 0;
+  }
+  .stat-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 18px 40px; border-right: 1px solid #2a2a2a;
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px; font-weight: 900; color: var(--blue-light); line-height: 1;
+  }
+  .stat-label { font-size: 13px; color: #888; font-weight: 500; line-height: 1.3; }
+
+  /* HAMBURGER */
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; border: none; background: none; }
+  .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (max-width: 768px) {
+    nav { position: relative; }
+    .nav-hamburger { display: flex; }
+    .nav-links {
+      display: none; flex-direction: column; gap: 0;
+      position: absolute; top: 72px; left: 0; right: 0;
+      background: var(--white); border-bottom: 2px solid var(--blue-light);
+      padding: 8px 24px 20px; z-index: 100;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { border-bottom: 1px solid var(--blue-pale); }
+    .nav-links a { display: block; padding: 12px 0; font-size: 16px; }
+    .nav-cta { margin-top: 8px; text-align: center; }
+    .stat-item { padding: 14px 20px; }
+    .stat-num { font-size: 22px; }
+  }
+
   @media (max-width: 900px) {
     nav { padding: 0 24px; }
     .nav-links { gap: 16px; }
@@ -219,6 +263,9 @@
     <li><a href="submit.html">Submit a Story</a></li>
     <li><a href="#signup" class="nav-cta">Join Now</a></li>
   </ul>
+  <button class="nav-hamburger" aria-label="Open navigation" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -248,40 +295,41 @@
     </div>
   </div>
 
-  <!-- RIGHT: Leaderboard -->
+  <!-- RIGHT: Leaderboard / Join CTA -->
   <div class="hero-right">
     <h3>🏆 Leaderboard</h3>
-    <p class="leaderboard-month">May 2026 · Resets monthly</p>
-    <div class="leaderboard-entry">
-      <div class="rank gold">1</div>
-      <div class="entry-info"><div class="entry-name">Aaliyah M.</div><div class="entry-action">Led a food drive</div></div>
-      <div class="entry-pts">47 pts</div>
-    </div>
-    <div class="leaderboard-entry">
-      <div class="rank silver">2</div>
-      <div class="entry-info"><div class="entry-name">Marcus T.</div><div class="entry-action">Tutored 3 students</div></div>
-      <div class="entry-pts">38 pts</div>
-    </div>
-    <div class="leaderboard-entry">
-      <div class="rank bronze">3</div>
-      <div class="entry-info"><div class="entry-name">Sofia R.</div><div class="entry-action">Community mural</div></div>
-      <div class="entry-pts">31 pts</div>
-    </div>
-    <div class="leaderboard-entry">
-      <div class="rank" style="font-size:15px">4</div>
-      <div class="entry-info"><div class="entry-name">Darius W.</div><div class="entry-action">Helped elderly neighbor</div></div>
-      <div class="entry-pts">24 pts</div>
-    </div>
-    <div class="leaderboard-entry">
-      <div class="rank" style="font-size:15px">5</div>
-      <div class="entry-info"><div class="entry-name">Priya K.</div><div class="entry-action">Organized cleanup</div></div>
-      <div class="entry-pts">19 pts</div>
+    <p class="leaderboard-month">Launches when members join</p>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px 0">
+      <div style="font-size:48px;margin-bottom:16px">🥇</div>
+      <p style="font-size:15px;font-weight:700;color:var(--white);margin-bottom:10px;line-height:1.3">No one's on the board yet.</p>
+      <p style="font-size:13px;color:#888;line-height:1.6;margin-bottom:24px">The first teen to join gets the top spot — right here.</p>
+      <a href="#signup" style="display:inline-block;background:var(--blue);color:var(--white);padding:11px 24px;border-radius:50px;font-size:14px;font-weight:600;text-decoration:none;transition:background 0.15s" onmouseover="this.style.background='#007aaa'" onmouseout="this.style.background='var(--blue)'">Claim your spot →</a>
     </div>
     <div class="leaderboard-cta">
-      <p>Want to earn points? <a href="#signup">Join the challenge →</a></p>
+      <p>Join the challenge to earn points</p>
     </div>
   </div>
 </section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stat-item">
+    <span class="stat-num">3</span>
+    <span class="stat-label">Stories<br>Published</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">2</span>
+    <span class="stat-label">Schools<br>Represented</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">PGH</span>
+    <span class="stat-label">Where It<br>Started</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">∞</span>
+    <span class="stat-label">Adults<br>Reconsidering</span>
+  </div>
+</div>
 
 <!-- THREE COLUMNS: Our Story | Featured Article | Sign Up -->
 <section class="three-col" id="about">
@@ -323,6 +371,7 @@
       </p>
     </div>
     <button class="read-toggle" onclick="toggleArticle('gitanjaliExtra', this)">Read more →</button>
+    <a href="gitanjali.html" class="col-link" style="margin-top:12px;display:inline-block">Read her full story →</a>
   </div>
 
   <!-- SIGN UP -->
