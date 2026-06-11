@@ -119,6 +119,18 @@
     object-fit: cover; background: var(--blue-pale);
     display: block;
   }
+  .wof-card-avatar {
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--blue-pale) 0%, #d0eaf8 100%);
+    border-bottom: 2px solid var(--blue-light);
+    flex-shrink: 0;
+  }
+  .wof-card-avatar span {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px; font-weight: 900;
+    color: var(--blue); opacity: 0.35;
+    line-height: 1; user-select: none;
+  }
   .wof-card.featured .wof-card-img {
     width: 45%; aspect-ratio: unset; height: 100%;
   }
@@ -266,7 +278,7 @@
 <!-- STATS -->
 <div class="stats-strip">
   <div class="stat-cell">
-    <div class="stat-number">3</div>
+    <div class="stat-number">4</div>
     <div class="stat-label">Stories Published</div>
   </div>
   <div class="stat-cell">
@@ -308,7 +320,7 @@
 
     <!-- Ben -->
     <article class="wof-card">
-      <img class="wof-card-img" src="teen2.jpg" alt="Student in classroom" onerror="this.style.background='var(--blue-pale)';this.style.height='180px';this.removeAttribute('src')">
+      <div class="wof-card-img wof-card-avatar"><span>B</span></div>
       <div class="wof-card-body">
         <p class="wof-tag">Student Story</p>
         <p class="wof-date">May 12, 2026</p>
@@ -320,7 +332,7 @@
 
     <!-- Joshua -->
     <article class="wof-card">
-      <img class="wof-card-img" src="teen1.jpg" alt="Teen at home" onerror="this.style.background='var(--blue-pale)';this.style.height='180px';this.removeAttribute('src')">
+      <div class="wof-card-img wof-card-avatar"><span>J</span></div>
       <div class="wof-card-body">
         <p class="wof-tag">Personal Story</p>
         <p class="wof-date">May 26, 2026</p>
