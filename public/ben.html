@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ben's Story — MSG Teens</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23A3CEF1'/><text x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-weight='900' font-size='20' fill='%230099CC'>M</text></svg>">
+<link rel="icon" href="logo.jpg" type="image/jpeg">
 <meta name="description" content="Ben was labeled a 'bad kid' — but his story tells a very different truth. Read it on MSG Teens.">
 <meta property="og:title" content="Ben: More Than a Label — MSG Teens">
 <meta property="og:description" content="A student whose behavior looked like defiance — but told a very different story up close.">
@@ -32,10 +32,8 @@
     background: var(--white); border-bottom: 2px solid var(--blue-light);
     padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 72px;
   }
-  .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
-  .nav-logo-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; }
-  .nav-logo-icon svg { width: 28px; height: 28px; }
-  .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--black); }
+  .nav-logo { display: flex; align-items: center; text-decoration: none; }
+  .nav-logo-img { height: 52px; width: auto; display: block; }
   .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
   .nav-links a { text-decoration: none; font-size: 14px; font-weight: 500; color: var(--black); letter-spacing: 0.03em; transition: color 0.2s; }
   .nav-links a:hover { color: var(--blue); }
@@ -159,20 +157,7 @@
 <!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
-    <div class="nav-logo-icon">
-      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="14" cy="14" r="5" fill="#5B3FD4"/>
-        <circle cx="4" cy="8" r="2.5" fill="#5B3FD4" opacity="0.6"/>
-        <circle cx="24" cy="8" r="2.5" fill="#5B3FD4" opacity="0.6"/>
-        <circle cx="4" cy="20" r="2.5" fill="#5B3FD4" opacity="0.6"/>
-        <circle cx="24" cy="20" r="2.5" fill="#5B3FD4" opacity="0.6"/>
-        <line x1="9" y1="11" x2="6" y2="9.5" stroke="#5B3FD4" stroke-width="1.5" stroke-dasharray="2 2"/>
-        <line x1="19" y1="11" x2="22" y2="9.5" stroke="#5B3FD4" stroke-width="1.5" stroke-dasharray="2 2"/>
-        <line x1="9" y1="17" x2="6" y2="18.5" stroke="#5B3FD4" stroke-width="1.5" stroke-dasharray="2 2"/>
-        <line x1="19" y1="17" x2="22" y2="18.5" stroke="#5B3FD4" stroke-width="1.5" stroke-dasharray="2 2"/>
-      </svg>
-    </div>
-    <span class="nav-logo-text">MSG Teens</span>
+    <img src="logo.jpg" alt="MSG Teens" class="nav-logo-img">
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
