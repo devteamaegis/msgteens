@@ -244,8 +244,7 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="wall-of-fame.html">Wall of Fame</a></li>
     <li><a href="submit.html">Blog</a></li>
-    <li><a href="about.html">About</a>
-    <a href="privacy.html">Privacy</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="submit.html">Submit a Story</a></li>
     <li><a href="#signup" class="nav-cta">Join Now</a></li>
   </ul>
@@ -300,7 +299,7 @@
 <!-- STATS STRIP -->
 <div class="stats-strip">
   <div class="stat-item">
-    <span class="stat-num">5</span>
+    <span class="stat-num">7</span>
     <span class="stat-label">Stories<br>Published</span>
   </div>
   <div class="stat-item">
@@ -386,71 +385,77 @@
   <div class="section-header">
     <h2>Stories from Real Teens</h2>
     <p>Every story here is real. Every person deserves to be understood.</p>
+    <a href="wall-of-fame.html" class="col-link" style="display:inline-block;margin-top:12px;font-size:15px;font-weight:600">See all stories on the Wall of Fame →</a>
   </div>
-  <div class="stories-grid">
+  <div class="stories-grid" style="grid-template-columns:repeat(3,1fr)">
 
-    <!-- Ben's Story -->
     <article class="story-card">
-      <p class="story-date">May 12, 2026</p>
+      <p class="story-date">January 24, 2026</p>
+      <p class="col-tag" style="margin-bottom:0">Innovator</p>
+      <h3 class="story-title">Gitanjali: Saving Lives at 11</h3>
+      <p class="story-excerpt">
+        She invented a lead-detection device at age 11 and was named TIME's Kid of the Year — but her teachers once called her "too ambitious." Her story challenges what we think a "realistic" student looks like.
+      </p>
+      <a href="gitanjali.html" class="col-link">Read Gitanjali's story →</a>
+    </article>
+
+    <article class="story-card">
+      <p class="story-date">March 8, 2026</p>
       <p class="col-tag" style="margin-bottom:0">Student Story</p>
       <h3 class="story-title">Ben: More Than a Label</h3>
       <p class="story-excerpt">
-        Ben is a student whose story shows that behavior does not always tell the full story about a person. Often sitting at the edge of his seat, tapping his pencil, looking around the room — adults saw disruption. But Ben was just trying his best.
+        Often sitting at the edge of his seat, tapping his pencil, looking around the room — adults saw disruption. But Ben was just trying his best. His story shows that behavior doesn't tell the full story.
       </p>
-      <a href="ben.html" class="col-link">Read Ben's full story →</a>
+      <a href="ben.html" class="col-link">Read Ben's story →</a>
     </article>
 
-    <!-- Joshua's Personal Story -->
+    <article class="story-card">
+      <p class="story-date">April 3, 2026</p>
+      <p class="col-tag" style="margin-bottom:0">Student Story</p>
+      <h3 class="story-title">Maya: The "Attitude Problem"</h3>
+      <p class="story-excerpt">
+        Maya asked a fair question about her grade and her teacher told her she had an "attitude problem." That label followed her all semester. But Maya wasn't being difficult — she was being a student.
+      </p>
+      <a href="maya.html" class="col-link">Read Maya's story →</a>
+    </article>
+
+    <article class="story-card">
+      <p class="story-date">May 4, 2026</p>
+      <p class="col-tag" style="margin-bottom:0">Student Story</p>
+      <h3 class="story-title">Malik: Called a Slacker</h3>
+      <p class="story-excerpt">
+        Malik worked 15 hours a week and helped raise his younger siblings. He studied past midnight and still showed up. But one semester of late homework was enough for his teacher to call him a slacker.
+      </p>
+      <a href="malik.html" class="col-link">Read Malik's story →</a>
+    </article>
+
     <article class="story-card">
       <p class="story-date">May 26, 2026</p>
-      <p class="col-tag" style="margin-bottom:0">Personal Story</p>
-      <h3 class="story-title">A Moment at Home</h3>
+      <p class="col-tag" style="margin-bottom:0">Founder's Story</p>
+      <h3 class="story-title">Joshua: Why I Started This</h3>
       <p class="story-excerpt">
-        At home, my parent asked me to do some chores, but I didn't answer right away and stayed on my phone for a minute. Right away, they got frustrated and said I was being disrespectful and not listening.
+        I didn't answer my parent right away and stayed on my phone for a minute. They called me disrespectful before giving me a chance to explain. That moment made me realize how fast adults reach for a label.
       </p>
-      <div class="story-full" id="joshuaStory">
-        <p>From their point of view, it looked like I was ignoring them and choosing not to help, which made the situation worse quickly. They assumed that I didn't care and that I was just being lazy or difficult on purpose. It seemed like I was choosing my phone over responsibility, and that I wasn't respecting what they asked me to do.</p>
-        <p>That assumption turned a small moment into a bigger problem because it felt like they had already decided what kind of person I was at that moment.</p>
-        <p>But the truth is, I wasn't trying to be disrespectful at all. I had a lot on my mind and felt overwhelmed, so I didn't respond right away. I was going to help — I just needed a second to process and shift my focus. What they didn't see was that I wasn't refusing. I just needed a little time and understanding, not to be judged right away.</p>
-      </div>
-      <button class="read-toggle" onclick="toggleArticle('joshuaStory', this)">Read more →</button>
+      <a href="joshua.html" class="col-link">Read Joshua's story →</a>
+    </article>
+
+    <article class="story-card" style="background:var(--blue-pale);border-style:dashed;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:36px 24px">
+      <div style="font-size:36px;margin-bottom:16px">✍️</div>
+      <h3 class="story-title" style="margin-bottom:10px">Your Story Could Be Here</h3>
+      <p class="story-excerpt" style="margin-bottom:20px">Every teen has a story worth telling. Submit yours and be featured on the Wall of Fame.</p>
+      <a href="submit.html" class="col-link" style="background:var(--blue);color:#fff;padding:10px 22px;border-radius:50px;border:none">Submit a Story →</a>
     </article>
 
   </div>
 </section>
 
-<!-- TEEN IMAGES GALLERY -->
-<section class="images-section" id="gallery">
-  <div class="section-header">
-    <h2>Teens in Action</h2>
-    <p>Real teens doing real good. Every photo tells a story adults need to see.</p>
-  </div>
-  <div class="img-grid">
-    <div class="img-tile">
-      <img src="teen1.jpg" alt="Teen volunteers collecting trash" onerror="this.style.display='none'">
-      <div class="img-tile-label">Community Cleanup</div>
-    </div>
-    <div class="img-tile">
-      <img src="teen2.jpg" alt="Teens doing park work" onerror="this.style.display='none'">
-      <div class="img-tile-label">Park Restoration</div>
-    </div>
-    <div class="img-tile">
-      <img src="teen3.jpg" alt="Teens gardening" onerror="this.style.display='none'">
-      <div class="img-tile-label">Urban Gardening</div>
-    </div>
-    <div class="img-tile">
-      <img src="teen4.jpg" alt="Teens serving food" onerror="this.style.display='none'">
-      <div class="img-tile-label">Food Service Volunteer</div>
-    </div>
-    <div class="img-tile">
-      <img src="teen5.jpg" alt="Teens at food drive" onerror="this.style.display='none'">
-      <div class="img-tile-label">Local Food Drive</div>
-    </div>
-    <div class="img-tile">
-      <img src="teen6.jpg" alt="Teen painting mural" onerror="this.style.display='none'">
-      <div class="img-tile-label">Community Mural</div>
-    </div>
-  </div>
+<!-- QUOTE SECTION -->
+<section style="background:var(--black);color:var(--white);padding:80px 48px;text-align:center">
+  <p style="font-size:13px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-light);margin-bottom:24px">Why It Matters</p>
+  <blockquote style="font-family:'Playfair Display',serif;font-size:clamp(22px,3.5vw,38px);font-weight:700;line-height:1.3;max-width:820px;margin:0 auto 32px;color:var(--white)">
+    "MSG was labeled dangerous for decades. Scientists later proved it wasn't. Teens are mislabeled every day. We're proving they aren't either."
+  </blockquote>
+  <p style="font-size:15px;color:#aaa">— Joshua Wright, Founder · MSG Teens · Central Catholic, Pittsburgh PA</p>
 </section>
 
 <!-- SUBMIT STORY BANNER -->
@@ -486,44 +491,10 @@
   // ── Google Sheets signup ─────────────────────────────────
   // Replace the URL below with your Google Apps Script Web App URL.
   // Setup: Extensions → Apps Script → paste the doPost code → Deploy → Web App → Anyone → Copy URL
-  const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
-
-  document.getElementById('signupForm').addEventListener('submit', async function(e) {
+  document.getElementById('signupForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    const btn = this.querySelector('button');
-    btn.textContent = 'Saving...';
-    btn.disabled = true;
-    const entry = {
-      name:   document.getElementById('name').value,
-      email:  document.getElementById('email').value,
-      school: document.getElementById('school').value,
-      role:   document.getElementById('role').value
-    };
-    try {
-      // mode: no-cors is required for Apps Script — we can't read the response,
-      // so we optimistically show success after the request fires.
-      await fetch(SHEET_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify(entry)
-      });
-    } catch(err) {
-      console.warn('Signup fetch error:', err);
-    }
-    document.getElementById('formMsg').style.display = 'block';
-    this.reset();
-    btn.textContent = 'Join MSG Teens →';
-    btn.disabled = false;
+    window.location.href = 'submit.html';
   });
-
-  // Read-more toggle
-  function toggleArticle(id, btn) {
-    const el = document.getElementById(id);
-    const isHidden = el.style.display === 'none' || el.style.display === '';
-    el.style.display = isHidden ? 'block' : 'none';
-    btn.textContent = isHidden ? 'Read less ↑' : 'Read more →';
-  }
 </script>
 </body>
 </html>

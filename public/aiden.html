@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aiden: The Defender — MSG Teens</title>
+<link rel="icon" href="logo.jpg" type="image/jpeg">
+<meta name="description" content="Aiden stepped in when a smaller kid was being picked on. Zero-tolerance punished him anyway. His story is about what happens when we stop asking why.">
+<meta property="og:title" content="Aiden: The Defender — MSG Teens">
+<meta property="og:description" content="He stood up for someone smaller. The school punished him for it. Read Aiden's story.">
+<meta property="og:url" content="https://msgteens.com/aiden.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://msgteens.com/logo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #0099CC;
+    --blue-light: #A3CEF1;
+    --blue-pale: #EBF6FC;
+    --black: #111111;
+    --grey: #8B8C89;
+    --white: #FFFFFF;
+    --radius: 16px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--black); overflow-x: hidden; }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--white); border-bottom: 2px solid var(--blue-light);
+    padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 72px;
+  }
+  .nav-logo { display: flex; align-items: center; text-decoration: none; }
+  .nav-logo-img { height: 52px; width: auto; display: block; }
+  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+  .nav-links a { text-decoration: none; font-size: 14px; font-weight: 500; color: var(--black); letter-spacing: 0.03em; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--blue); }
+  .nav-cta { background: var(--blue); color: var(--white) !important; padding: 10px 22px; border-radius: 50px; font-weight: 600 !important; }
+  .nav-cta:hover { background: #007aaa !important; }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; border: none; background: none; }
+  .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .article-hero {
+    background: var(--black); color: var(--white);
+    padding: 80px 48px 64px; text-align: center;
+    border-bottom: 3px solid #222;
+  }
+  .article-hero .tag {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--blue-light); margin-bottom: 20px;
+  }
+  .article-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 54px); font-weight: 900;
+    line-height: 1.1; margin-bottom: 20px;
+  }
+  .article-hero h1 em { color: var(--blue-light); font-style: normal; }
+  .article-hero .meta { font-size: 14px; color: #888; }
+
+  .article-body {
+    max-width: 720px; margin: 0 auto;
+    padding: 64px 48px 80px;
+  }
+  .article-body p {
+    font-size: 17px; line-height: 1.8; color: #333;
+    margin-bottom: 24px;
+  }
+  .article-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px; font-weight: 700;
+    margin: 48px 0 16px; color: var(--black);
+  }
+  .article-body blockquote {
+    border-left: 4px solid var(--blue);
+    padding: 16px 24px; margin: 32px 0;
+    background: var(--blue-pale); border-radius: 0 8px 8px 0;
+    font-size: 18px; font-style: italic; color: #444; line-height: 1.6;
+  }
+
+  .disclosure {
+    font-size: 13px; color: var(--grey);
+    border-top: 1px solid #eee; padding-top: 24px;
+    margin-top: 48px; font-style: italic;
+  }
+
+  .share-row {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    margin: 48px 0 0;
+  }
+  .share-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 20px; border-radius: 50px; font-size: 14px; font-weight: 600;
+    text-decoration: none; transition: opacity 0.2s;
+  }
+  .share-btn:hover { opacity: 0.85; }
+  .share-twitter { background: #000; color: #fff; }
+  .share-copy { background: var(--blue-pale); color: var(--blue); border: 2px solid var(--blue-light); cursor: pointer; }
+
+  .back-banner {
+    background: var(--blue-pale);
+    border-top: 3px solid var(--blue-light);
+    border-bottom: 3px solid var(--blue-light);
+    padding: 24px 48px;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+  }
+  .back-banner p { font-size: 15px; color: #555; }
+  .back-banner a {
+    font-size: 14px; font-weight: 600; color: var(--blue);
+    text-decoration: none; border-bottom: 2px solid var(--blue-light); padding-bottom: 2px;
+  }
+  .back-banner a:hover { border-color: var(--blue); }
+
+  footer {
+    background: #0f0f0f; color: #888;
+    padding: 40px 48px; display: flex; justify-content: space-between;
+    align-items: center; font-size: 13px; flex-wrap: wrap; gap: 16px;
+  }
+  footer a { color: var(--blue-light); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 24px; position: relative; }
+    .nav-hamburger { display: flex; }
+    .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 72px; left: 0; right: 0; background: var(--white); border-bottom: 2px solid var(--blue-light); padding: 8px 24px 20px; z-index: 100; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .nav-links.open { display: flex; }
+    .nav-links li { border-bottom: 1px solid var(--blue-pale); }
+    .nav-links a { display: block; padding: 12px 0; font-size: 16px; }
+    .nav-cta { margin-top: 8px; text-align: center; }
+    .article-hero { padding: 56px 24px 48px; }
+    .article-body { padding: 40px 24px 60px; }
+    .back-banner { padding: 20px 24px; }
+    footer { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.jpg" alt="MSG Teens" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="wall-of-fame.html">Wall of Fame</a></li>
+    <li><a href="submit.html">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="submit.html" style="color:var(--blue);font-weight:600">Submit a Story</a></li>
+    <li><a href="index.html#signup" class="nav-cta">Join Now</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Open navigation" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="article-hero">
+  <p class="tag">Student Story</p>
+  <h1>Aiden:<br><em>The Defender</em></h1>
+  <p class="meta">June 2, 2026 &nbsp;·&nbsp; MSG Teens</p>
+</div>
+
+<div class="article-body">
+
+  <p>
+    It happened at lunch. A smaller kid — a seventh grader — had his tray knocked out of his hands by a group of eighth graders who laughed and walked away. Food went everywhere. People stared. Nobody moved.
+  </p>
+
+  <p>
+    Aiden moved. He walked over, helped the kid pick up what he could, and told the group to knock it off. Words were exchanged. The group pushed back. A teacher came running in at the tail end — just in time to see Aiden in the middle of it, pointing, voice raised.
+  </p>
+
+  <blockquote>
+    "The teacher saw me being loud and assumed I was the problem. She didn't see what happened before."
+  </blockquote>
+
+  <p>
+    Aiden was sent to the office. The group that knocked the tray over was not. He received a one-day suspension under the school's zero-tolerance policy for "aggressive behavior in the cafeteria." The report didn't mention the seventh grader. It didn't mention what started it.
+  </p>
+
+  <h2>The Policy Was Designed to Be Fair</h2>
+
+  <p>
+    Zero-tolerance rules exist for good reasons. Schools adopted them to remove judgment from the equation — to make discipline predictable and equal for everyone. If you're involved in a confrontation, the policy applies. No exceptions, no favoritism.
+  </p>
+
+  <p>
+    But removing judgment also removes context. And in Aiden's case, the context was everything.
+  </p>
+
+  <p>
+    Aiden hadn't started the confrontation. He'd interrupted it. But because he was the loudest voice when the teacher arrived, the label "aggressive" was already forming. By the time he tried to explain, the decision had been made.
+  </p>
+
+  <h2>What the Label Cost Him</h2>
+
+  <p>
+    The suspension itself wasn't the worst part. What followed was. Other teachers heard about it. His guidance counselor noted it in his file. When he applied for a peer leadership program the following semester, someone in the room mentioned the incident. He didn't get in.
+  </p>
+
+  <p>
+    Aiden spent months carrying the label of "aggressive kid" — not because of what he did, but because of what someone assumed when they walked in at the wrong moment.
+  </p>
+
+  <blockquote>
+    "I stopped speaking up after that. If standing up for someone gets you suspended, you learn to look away."
+  </blockquote>
+
+  <h2>The Thing Nobody Talks About</h2>
+
+  <p>
+    There's a cost to labeling the wrong person. When Aiden got suspended, the seventh grader watched it happen. He saw that speaking up got you punished. He saw that the adults, when they finally showed up, didn't ask who started it.
+  </p>
+
+  <p>
+    Aiden's story isn't just about one kid who got a bad label. It's about what happens to a whole hallway of kids watching adults respond to the loudest moment, not the full story.
+  </p>
+
+  <p>
+    The question isn't whether zero-tolerance policies are good or bad. The question is: what do we lose when we stop asking why?
+  </p>
+
+  <div class="disclosure">
+    Aiden is a composite character based on real experiences submitted to MSG Teens. Details have been changed to protect privacy.
+  </div>
+
+  <div class="share-row">
+    <a href="https://twitter.com/intent/tweet?text=Aiden+stood+up+for+a+kid+being+bullied+and+got+suspended+for+it.+Read+his+story+at+MSG+Teens.&url=https://msgteens.com/aiden.html" target="_blank" rel="noopener" class="share-btn share-twitter">Share on X →</a>
+    <button class="share-btn share-copy" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!'">Copy Link</button>
+  </div>
+
+</div>
+
+<div class="back-banner">
+  <p>Know a teen with a story like Aiden's?</p>
+  <a href="submit.html">Submit a story to MSG Teens →</a>
+</div>
+
+<footer>
+  <div>
+    <strong style="color:var(--white)">MSG Teens</strong> &nbsp;·&nbsp; msgteens.com<br>
+    <span>Founded by Joshua Wright · Central Catholic · Pittsburgh, PA</span>
+  </div>
+  <div style="display:flex;gap:24px;flex-wrap:wrap">
+    <a href="index.html">Home</a>
+    <a href="wall-of-fame.html">Wall of Fame</a>
+    <a href="submit.html">Submit a Story</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+  <div style="font-size:12px">© 2026 MSG Teens. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
