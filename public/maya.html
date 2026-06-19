@@ -3,36 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Joshua's Story — MSG Teens</title>
+<title>Maya's Story — MSG Teens</title>
 <link rel="icon" href="logo.jpg" type="image/jpeg">
-<meta name="description" content="Joshua was on his phone when his parent asked him to help. What looked like disrespect was something else entirely. Read his story on MSG Teens.">
-<meta property="og:title" content="Joshua: A Moment at Home — MSG Teens">
-<meta property="og:description" content="He didn't answer right away. That small pause became a big misunderstanding — until both sides took a second to actually listen.">
-<meta property="og:url" content="https://msgteens.com/joshua.html">
+<meta name="description" content="Maya was called a problem student for speaking up in class. Her teachers saw attitude. She saw injustice. Read her story on MSG Teens.">
+<meta property="og:title" content="Maya: The Attitude They Couldn't Handle — MSG Teens">
+<meta property="og:description" content="She raised her hand to point out something unfair. The label that followed lasted a semester.">
+<meta property="og:url" content="https://msgteens.com/maya.html">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://msgteens.com/logo.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --blue: #0099CC;
-    --blue-light: #A3CEF1;
-    --blue-pale: #EBF6FC;
-    --black: #111111;
-    --grey: #8B8C89;
-    --white: #FFFFFF;
-    --radius: 16px;
-  }
+  :root { --blue: #0099CC; --blue-light: #A3CEF1; --blue-pale: #EBF6FC; --black: #111111; --grey: #8B8C89; --white: #FFFFFF; --radius: 16px; }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--black); overflow-x: hidden; }
-
-  /* NAV */
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: var(--white); border-bottom: 2px solid var(--blue-light);
-    padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 72px;
-  }
+  nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 2px solid var(--blue-light); padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
   .nav-logo { display: flex; align-items: center; text-decoration: none; }
   .nav-logo-img { height: 52px; width: auto; display: block; }
   .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
@@ -40,105 +26,38 @@
   .nav-links a:hover { color: var(--blue); }
   .nav-cta { background: var(--blue); color: var(--white) !important; padding: 10px 22px; border-radius: 50px; font-weight: 600 !important; }
   .nav-cta:hover { background: #007aaa !important; color: var(--white) !important; }
-
-  /* ARTICLE HERO */
-  .article-hero {
-    background: var(--blue-pale);
-    border-bottom: 3px solid var(--blue-light);
-    padding: 72px 48px 56px;
-    max-width: 860px; margin: 0 auto;
-  }
-  .back-link {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 13px; font-weight: 600; color: var(--blue);
-    text-decoration: none; margin-bottom: 32px;
-    letter-spacing: 0.04em;
-  }
+  .article-hero { background: var(--blue-pale); border-bottom: 3px solid var(--blue-light); padding: 72px 48px 56px; max-width: 860px; margin: 0 auto; }
+  .back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--blue); text-decoration: none; margin-bottom: 32px; letter-spacing: 0.04em; }
   .back-link:hover { opacity: 0.75; }
-  .article-tag {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--blue); margin-bottom: 16px;
-  }
-  .article-date {
-    font-size: 12px; color: var(--grey); font-weight: 500;
-    letter-spacing: 0.06em; text-transform: uppercase;
-    margin-bottom: 16px;
-  }
-  .article-headline {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 5vw, 52px); font-weight: 900;
-    line-height: 1.1; margin-bottom: 20px; color: var(--black);
-  }
+  .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); margin-bottom: 16px; }
+  .article-date { font-size: 12px; color: var(--grey); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 16px; }
+  .article-headline { font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 52px); font-weight: 900; line-height: 1.1; margin-bottom: 20px; color: var(--black); }
   .article-headline em { color: var(--blue); font-style: normal; }
-  .article-deck {
-    font-size: 18px; line-height: 1.7; color: #555; max-width: 620px;
-  }
-
-  /* ARTICLE BODY */
-  .article-body {
-    max-width: 860px; margin: 0 auto;
-    padding: 56px 48px 80px;
-  }
-  .article-body p {
-    font-size: 16px; line-height: 1.85; color: #333;
-    margin-bottom: 24px;
-  }
+  .article-deck { font-size: 18px; line-height: 1.7; color: #555; max-width: 620px; }
+  .article-body { max-width: 860px; margin: 0 auto; padding: 56px 48px 80px; }
+  .article-body p { font-size: 16px; line-height: 1.85; color: #333; margin-bottom: 24px; }
   .article-body p:last-child { margin-bottom: 0; }
-  .article-quote {
-    border-left: 4px solid var(--blue);
-    padding: 20px 28px;
-    margin: 36px 0;
-    background: var(--blue-pale);
-    border-radius: 0 var(--radius) var(--radius) 0;
-  }
-  .article-quote p {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px; font-style: italic; color: var(--black);
-    margin: 0; line-height: 1.5;
-  }
-
-  /* BACK TO STORIES */
-  .back-banner {
-    background: var(--black); color: var(--white);
-    padding: 48px; text-align: center;
-  }
-  .back-banner h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px; margin-bottom: 20px;
-  }
+  .article-quote { border-left: 4px solid var(--blue); padding: 20px 28px; margin: 36px 0; background: var(--blue-pale); border-radius: 0 var(--radius) var(--radius) 0; }
+  .article-quote p { font-family: 'Playfair Display', serif; font-size: 20px; font-style: italic; color: var(--black); margin: 0; line-height: 1.5; }
+  .back-banner { background: var(--black); color: var(--white); padding: 48px; text-align: center; }
+  .back-banner h3 { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 20px; }
   .back-banner h3 em { color: var(--blue-light); font-style: normal; }
-  .btn-white {
-    background: var(--white); color: var(--black);
-    padding: 14px 32px; border-radius: 50px;
-    font-size: 15px; font-weight: 700; text-decoration: none;
-    display: inline-block; transition: background 0.15s;
-  }
+  .btn-white { background: var(--white); color: var(--black); padding: 14px 32px; border-radius: 50px; font-size: 15px; font-weight: 700; text-decoration: none; display: inline-block; transition: background 0.15s; }
   .btn-white:hover { background: var(--blue-light); }
-
-  /* FOOTER */
-  footer {
-    background: #0f0f0f; color: #888;
-    padding: 40px 48px; display: flex; justify-content: space-between;
-    align-items: center; font-size: 13px; flex-wrap: wrap; gap: 16px;
-  }
+  footer { background: #0f0f0f; color: #888; padding: 40px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; flex-wrap: wrap; gap: 16px; }
   footer a { color: var(--blue-light); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
-
-  /* SHARE ROW */
   .share-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 24px 0; border-top: 2px solid var(--blue-pale); margin-top: 48px; }
   .share-label { font-size: 13px; font-weight: 600; color: var(--grey); }
   .share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: 50px; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.15s, color 0.15s; border: 2px solid var(--blue-light); background: var(--white); color: var(--black); }
   .share-btn:hover { background: var(--blue-pale); border-color: var(--blue); }
   .share-btn.twitter { background: var(--black); color: var(--white); border-color: var(--black); }
   .share-btn.twitter:hover { background: #222; }
-
-  /* HAMBURGER */
   .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; border: none; background: none; }
   .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
   .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
   .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
   @media (max-width: 768px) {
     nav { padding: 0 24px; position: relative; }
     .nav-hamburger { display: flex; }
@@ -155,7 +74,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
     <img src="logo.jpg" alt="MSG Teens" class="nav-logo-img">
@@ -164,8 +82,7 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="wall-of-fame.html">Wall of Fame</a></li>
     <li><a href="submit.html">Blog</a></li>
-    <li><a href="about.html">About</a>
-    <a href="privacy.html">Privacy</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="submit.html">Submit a Story</a></li>
     <li><a href="index.html#signup" class="nav-cta">Join Now</a></li>
   </ul>
@@ -174,66 +91,66 @@
   </button>
 </nav>
 
-<!-- ARTICLE HERO -->
 <div class="article-hero">
   <a href="wall-of-fame.html" class="back-link">← Back to Wall of Fame</a>
-  <p class="article-tag">Personal Story</p>
-  <p class="article-date">May 26, 2026</p>
-  <h1 class="article-headline">Joshua: <em>A Moment at Home</em></h1>
-  <p class="article-deck">He didn't answer right away. That small pause became a big misunderstanding — until both sides took a second to actually listen.</p>
+  <p class="article-tag">Student Story</p>
+  <p class="article-date">April 3, 2026</p>
+  <h1 class="article-headline">Maya: <em>The Attitude They Couldn't Handle</em></h1>
+  <p class="article-deck">She raised her hand to point out something unfair. The label that followed lasted a whole semester — until one adult actually listened.</p>
+  <p style="font-size:13px;color:var(--grey);margin-top:20px;font-style:italic">Note: Maya is a composite character based on real experiences submitted to MSG Teens. Name and details are fictionalized to protect privacy.</p>
 </div>
 
-<!-- ARTICLE BODY -->
 <div class="article-body">
 
   <p>
-    It was an ordinary evening at home. My parent asked me to do some chores, but I didn't answer right away — I stayed on my phone for another minute before I looked up. That minute was all it took.
+    Maya was the kind of student teachers described in two completely different ways depending on who you asked. Some said she was sharp, engaged, always had something to contribute. Others said she had an attitude problem — that she was combative, difficult, and hard to manage in a classroom.
   </p>
 
   <p>
-    Right away, they got frustrated. From where they were standing, it looked like I was ignoring them on purpose — choosing my phone over responsibility, choosing distraction over respect. They assumed I didn't care. That I was being lazy or difficult. And once that assumption landed, the whole conversation went sideways fast.
+    The incident that started everything was small. A grading dispute in English class, junior year. Maya had turned in an essay she was genuinely proud of. She got a C+. When she looked at the rubric, she couldn't find where she'd lost points — the comments were vague, and a classmate who'd written a shorter essay on the same topic got a B+. So she asked. Politely, she thought. She went up after class and said, "Can you walk me through where I lost points? I want to understand what to do differently."
+  </p>
+
+  <p>
+    The teacher took it as a challenge. Not as a question — as a confrontation. The conversation escalated quickly. Maya asked a follow-up. The teacher said she was being disrespectful. Maya said she was just trying to understand. By the end of it, Maya had a note sent home and a reputation in the English department that lasted for the rest of the year.
   </p>
 
   <div class="article-quote">
-    <p>"That assumption turned a small moment into a bigger problem — because it felt like they had already decided what kind of person I was at that moment."</p>
+    <p>"I wasn't challenging her. I was doing exactly what every adult had always told me to do — advocate for myself. Apparently that only works when adults are ready to hear it."</p>
   </div>
 
   <p>
-    But the truth is, I wasn't trying to be disrespectful at all. I had a lot on my mind. I was overwhelmed — the kind of overwhelmed that's hard to explain, especially when someone is already raising their voice. I wasn't refusing to help. I just needed a second to breathe, to shift gears, to get out of my own head before I could be present for someone else.
+    What followed was a semester of being watched differently. Teachers who hadn't been in that room started treating Maya with a kind of low-grade suspicion — the kind you can feel but can't prove. She noticed she got called on less. Her contributions in class discussion were met with shorter responses. One teacher told her to "be careful about how she comes across."
   </p>
 
   <p>
-    What they saw from the outside and what was actually happening inside were completely different things. The pause wasn't defiance. It was me trying to regulate. But they had no way of knowing that, and I had no way of explaining it in the moment, because by then it felt like I was already on trial.
+    The thing is, Maya hadn't done anything wrong. She had asked a reasonable question through a reasonable channel. But somewhere in that exchange, "advocating for herself" got translated into "attitude problem" — and that translation stuck in a way that had nothing to do with what actually happened.
   </p>
 
   <p>
-    This is the thing about being a teenager that adults don't always get: we're carrying a lot. School pressure, social stuff, things we're still trying to figure out about ourselves — and sometimes that weight shows up as a pause, a one-word answer, a face that doesn't look like what's going on inside. It doesn't mean we're being rude. It means we need a moment.
+    The turnaround came from a different teacher entirely. Her AP History teacher, who had heard the secondhand version of the story, asked Maya about it directly one afternoon. Not to adjudicate it, just to hear her side. Maya explained what she'd asked and why. The teacher listened without interrupting. At the end she said, "That sounds like exactly the right question to ask." That was it. Four words. But they mattered more than Maya could explain.
   </p>
 
   <p>
-    Once my parent actually asked — calmly, without assuming — I was able to explain. And once they heard me out, they understood. That conversation didn't have to be a fight. It never does. But it almost always becomes one when the first move is an assumption instead of a question.
+    The label didn't disappear overnight. But having one adult treat her version of the story as credible changed how Maya carried herself for the rest of the year. She stopped shrinking. She kept asking questions. And she stopped thinking the problem was her.
   </p>
 
   <p>
-    The label "disrespectful" got attached to me before anyone asked what was actually happening. That's the same thing MSG has dealt with for decades: judged before the full story was heard. The science eventually corrected the record on MSG. Stories like this one are how we correct the record on teenagers.
+    Self-advocacy in teenagers looks like attitude to adults who aren't ready for it. That's not a problem with the teenager.
   </p>
 
-  <!-- SHARE ROW -->
   <div class="share-row">
     <span class="share-label">Share this story:</span>
     <button class="share-btn" onclick="copyLink(this)">🔗 Copy Link</button>
-    <a class="share-btn twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmsgteens.com%2Fjoshua.html&text=He%20didn%27t%20answer%20right%20away.%20That%20pause%20was%20misread%20as%20disrespect%20%E2%80%94%20until%20someone%20actually%20asked.%20via%20%40msgteens" target="_blank" rel="noopener">𝕏 Share</a>
+    <a class="share-btn twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmsgteens.com%2Fmaya.html&text=She%20asked%20a%20fair%20question%20about%20her%20grade.%20She%20got%20labeled%20a%20problem%20student.%20%E2%80%94%20via%20%40msgteens" target="_blank" rel="noopener">𝕏 Share</a>
   </div>
 
 </div>
 
-<!-- BACK BANNER -->
 <div class="back-banner">
-  <h3>Have a story like <em>Joshua's?</em></h3>
-  <a href="submit.html" class="btn-white">Submit Your Story →</a>
+  <h3>Know a teen like <em>Maya?</em></h3>
+  <a href="submit.html" class="btn-white">Submit Their Story →</a>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div>
     <strong style="color:var(--white)">MSG Teens</strong> &nbsp;·&nbsp; msgteens.com<br>
@@ -242,7 +159,6 @@
   <div style="display:flex;gap:24px;flex-wrap:wrap">
     <a href="index.html">Home</a>
     <a href="wall-of-fame.html">Wall of Fame</a>
-    <a href="submit.html">Blog</a>
     <a href="submit.html">Submit a Story</a>
     <a href="about.html">About</a>
     <a href="privacy.html">Privacy</a>
