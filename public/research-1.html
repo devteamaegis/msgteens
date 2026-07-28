@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sofia: Called "Dramatic" — MSG Teens</title>
+<title>The MSG Myth — Research — MSG Teens</title>
 <link rel="icon" href="logo.jpg" type="image/jpeg">
-<meta name="description" content="Sofia was told she was being dramatic. Her teachers thought she needed to toughen up. What she actually needed was a diagnosis — and someone to listen first.">
-<meta property="og:title" content="Sofia: Called "Dramatic" — MSG Teens">
-<meta property="og:description" content="She wasn't dramatic. She had undiagnosed anxiety. Read Sofia's story at MSG Teens.">
-<meta property="og:url" content="https://msgteens.com/sofia.html">
+<meta name="description" content="How one letter in 1968 turned a safe food additive into a decades-long health scare — and what it teaches us about labels.">
+<meta property="og:title" content="The MSG Myth — MSG Teens Research">
+<meta property="og:description" content="How labels spread faster than facts. Research by Joshua Wright.">
+<meta property="og:url" content="https://msgteens.com/research-1.html">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://msgteens.com/logo.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -64,7 +64,7 @@
 
   .article-body {
     max-width: 720px; margin: 0 auto;
-    padding: 64px 48px 80px;
+    padding: 64px 48px 40px;
   }
   .article-body p {
     font-size: 17px; line-height: 1.8; color: #333;
@@ -82,24 +82,37 @@
     font-size: 18px; font-style: italic; color: #444; line-height: 1.6;
   }
 
-  .disclosure {
-    font-size: 13px; color: var(--grey);
-    border-top: 1px solid #eee; padding-top: 24px;
-    margin-top: 48px; font-style: italic;
+  /* IMAGE / CHART FIGURE */
+  figure { margin: 40px 0; }
+  figure img {
+    width: 100%; height: auto; display: block;
+    border-radius: var(--radius); border: 2px solid var(--blue-light);
   }
+  figure .img-placeholder {
+    width: 100%; aspect-ratio: 16/9;
+    background: linear-gradient(135deg, var(--blue-pale) 0%, #d0eaf8 100%);
+    border-radius: var(--radius); border: 2px dashed var(--blue-light);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: var(--grey); text-align: center; padding: 24px;
+  }
+  figure .img-placeholder span { font-size: 40px; margin-bottom: 12px; }
+  figure .img-placeholder p { font-size: 13px; color: var(--grey); }
+  figcaption { font-size: 13px; color: var(--grey); text-align: center; margin-top: 12px; font-style: italic; }
 
-  .share-row {
-    display: flex; gap: 12px; flex-wrap: wrap;
-    margin: 48px 0 0;
+  /* SOURCES BLOCK */
+  .sources {
+    max-width: 720px; margin: 0 auto;
+    padding: 0 48px 40px;
   }
-  .share-btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 10px 20px; border-radius: 50px; font-size: 14px; font-weight: 600;
-    text-decoration: none; transition: opacity 0.2s;
+  .sources h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 700; margin-bottom: 16px;
+    padding-top: 32px; border-top: 2px solid var(--blue-light);
   }
-  .share-btn:hover { opacity: 0.85; }
-  .share-twitter { background: #000; color: #fff; }
-  .share-copy { background: var(--blue-pale); color: var(--blue); border: 2px solid var(--blue-light); cursor: pointer; }
+  .sources ol { padding-left: 22px; }
+  .sources li { font-size: 14px; line-height: 1.7; color: #555; margin-bottom: 12px; }
+  .sources li a { color: var(--blue); text-decoration: none; border-bottom: 1px solid var(--blue-light); }
+  .sources li a:hover { border-color: var(--blue); }
 
   .back-banner {
     background: var(--blue-pale);
@@ -132,7 +145,8 @@
     .nav-links a { display: block; padding: 12px 0; font-size: 16px; }
     .nav-cta { margin-top: 8px; text-align: center; }
     .article-hero { padding: 56px 24px 48px; }
-    .article-body { padding: 40px 24px 60px; }
+    .article-body { padding: 40px 24px 32px; }
+    .sources { padding: 0 24px 32px; }
     .back-banner { padding: 20px 24px; }
     footer { flex-direction: column; text-align: center; }
   }
@@ -147,9 +161,9 @@
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="wall-of-fame.html">Wall of Fame</a></li>
-    <li><a href="research.html">Research</a></li>
+    <li><a href="research.html" style="color:var(--blue);font-weight:600">Research</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="submit.html" style="color:var(--blue);font-weight:600">Submit a Story</a></li>
+    <li><a href="submit.html">Submit a Story</a></li>
     <li><a href="index.html#signup" class="nav-cta">Join Now</a></li>
   </ul>
   <button class="nav-hamburger" aria-label="Open navigation" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
@@ -158,89 +172,77 @@
 </nav>
 
 <div class="article-hero">
-  <p class="tag">Student Story</p>
-  <h1>Sofia:<br><em>Called "Dramatic"</em></h1>
-  <p class="meta">June 16, 2026 &nbsp;·&nbsp; MSG Teens</p>
+  <p class="tag">Research · The Evidence</p>
+  <h1>The MSG Myth:<br><em>how a label outran the facts.</em></h1>
+  <p class="meta">By Joshua Wright &nbsp;·&nbsp; Coming soon</p>
 </div>
+
+<!--
+  ============================================================
+  RESEARCH POST TEMPLATE
+  This is a placeholder. To publish real research:
+  1. Replace the title + hero above
+  2. Replace the paragraphs below with the real writing
+  3. Swap the .img-placeholder blocks for real <img> tags
+  4. Fill in the real sources at the bottom
+  Copy this whole file to research-2.html, research-3.html, etc.
+  for each new piece, and add a matching card in research.html.
+  ============================================================
+-->
 
 <div class="article-body">
 
   <p>
-    In sixth grade, Sofia started having panic attacks before tests. Her heart would race. Her hands would go cold. Sometimes she'd freeze at her desk and stare at the paper for ten minutes, unable to write a single word.
+    <strong>[This is placeholder text.]</strong> In 1968, a single letter published in a major medical journal suggested that monosodium glutamate — MSG — might be responsible for a set of symptoms after eating at Chinese restaurants. It wasn't a study. It was one doctor's observation. But it was enough.
   </p>
 
   <p>
-    She tried to tell her teachers. She went to the office. She called her mom from the nurse's room twice in one week. The response she got, again and again, was a version of the same thing:
+    Within a few years, "No MSG" had become a marketing badge. Restaurants printed it on menus. Parents avoided it. An entire additive that had been used safely for over half a century became shorthand for something harmful — long before any rigorous science had weighed in.
+  </p>
+
+  <figure>
+    <div class="img-placeholder">
+      <span>📈</span>
+      <p>Chart / infographic goes here.<br>Replace this block with an &lt;img&gt; tag once Joshua adds the visual.</p>
+    </div>
+    <figcaption>Figure 1 — Placeholder for a chart or infographic.</figcaption>
+  </figure>
+
+  <h2>What the science actually found</h2>
+
+  <p>
+    Over the following decades, study after study looked for a credible link between MSG and the reported symptoms. Controlled trials — where participants didn't know whether they were getting MSG or a placebo — repeatedly failed to reproduce the effect. The U.S. Food and Drug Administration classifies MSG as "generally recognized as safe."
   </p>
 
   <blockquote>
-    "You need to calm down. Everyone gets nervous before tests. You can't let yourself get so worked up."
+    "The science was always there. But the narrative was stronger." — a pattern that repeats far beyond food.
   </blockquote>
 
   <p>
-    Nobody said the word "dramatic" to her face. But she heard it in the hallway. A teacher told her mom Sofia needed to "develop some resilience." A counselor suggested she was "catastrophizing." The message was clear: her reactions were too big. The problem was Sofia, not what was happening inside her body.
+    That's the part that matters for MSG Teens. The MSG story isn't really about food. It's about how fast a label can spread, how long it can stick, and how much harder it is to clear a name than to stain one. Teenagers live inside that same pattern every day.
   </p>
 
-  <h2>A Year of Shrinking</h2>
+  <h2>Why this matters for teens</h2>
 
   <p>
-    Sofia spent most of seventh grade trying to disappear. She stopped raising her hand. She stopped asking for extra time. She stopped telling anyone when she felt the panic starting because every time she did, the response made her feel worse, not better.
+    <strong>[Placeholder.]</strong> Just like MSG, teenagers carry labels that were assigned quickly and questioned slowly — lazy, disrespectful, distracted, dramatic. The evidence often points the other way, but the story adults already believe is stronger than the facts in front of them. This is the connection every piece of research on this site keeps coming back to.
   </p>
-
-  <p>
-    Her grades dropped — not because she didn't understand the material, but because she could barely finish a test without her hands shaking. She started skipping school on test days. She told her parents she was sick. Sometimes she was.
-  </p>
-
-  <p>
-    By the end of seventh grade, Sofia had been labeled a "test-avoider." Her file noted that she struggled with "emotional regulation" and had a pattern of absences around assessments. No one had yet asked what was causing the absences.
-  </p>
-
-  <h2>What Finally Changed</h2>
-
-  <p>
-    In eighth grade, Sofia's parents took her to a doctor outside of school. It took one appointment. The doctor listened for forty minutes and then said, calmly, that Sofia had generalized anxiety disorder — a medical condition, not a personality flaw.
-  </p>
-
-  <p>
-    With that diagnosis came accommodations: extended test time, a quiet room, the ability to step out when she felt an episode coming on. Within one semester, Sofia's grades came back. Within a year, she was on the honor roll.
-  </p>
-
-  <blockquote>
-    "Nothing about me changed. The only thing that changed was that someone finally believed me."
-  </blockquote>
-
-  <h2>What Gets Lost When We Don't Listen</h2>
-
-  <p>
-    Sofia's story is not rare. Anxiety disorders affect roughly one in three teenagers at some point — and girls are nearly twice as likely as boys to be diagnosed. But the path to diagnosis often runs through adults who mistake panic for attitude, and avoidance for laziness.
-  </p>
-
-  <p>
-    When a teen acts "dramatic," the question worth asking isn't "why can't they handle this?" It's "what are they handling that we haven't noticed yet?"
-  </p>
-
-  <p>
-    Sofia lost almost two years to a label that was wrong. She wasn't dramatic. She wasn't catastrophizing. She had a medical condition that nobody was looking for because they had already decided what kind of student she was.
-  </p>
-
-  <p>
-    The only thing she needed — and the one thing she wasn't given — was someone to listen before they concluded.
-  </p>
-
-  <div class="disclosure">
-    Sofia is a composite character based on real experiences submitted to MSG Teens. Details have been changed to protect privacy.
-  </div>
-
-  <div class="share-row">
-    <a href="https://twitter.com/intent/tweet?text=She+wasn%27t+being+dramatic.+She+had+undiagnosed+anxiety.+Read+Sofia%27s+story+at+MSG+Teens.&url=https://msgteens.com/sofia.html" target="_blank" rel="noopener" class="share-btn share-twitter">Share on X →</a>
-    <button class="share-btn share-copy" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied!'">Copy Link</button>
-  </div>
 
 </div>
 
+<!-- SOURCES / CITATIONS -->
+<div class="sources">
+  <h2>Sources</h2>
+  <ol>
+    <li><strong>[Placeholder citation.]</strong> Kwok, R. H. M. (1968). "Chinese-Restaurant Syndrome." <em>New England Journal of Medicine.</em> — Replace with the real source.</li>
+    <li><strong>[Placeholder citation.]</strong> U.S. Food and Drug Administration. "Questions and Answers on Monosodium glutamate (MSG)." — <a href="#">Add link</a></li>
+    <li><strong>[Placeholder citation.]</strong> Add each study, article, or dataset Joshua used here, in order.</li>
+  </ol>
+</div>
+
 <div class="back-banner">
-  <p>Know a teen whose story deserves to be heard?</p>
-  <a href="submit.html">Submit a story to MSG Teens →</a>
+  <p>Want to see the stories behind the research?</p>
+  <a href="wall-of-fame.html">Read teen stories →</a>
 </div>
 
 <footer>

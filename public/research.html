@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Submit a Teen Story — MSG Teens</title>
+<title>Research — MSG Teens</title>
 <link rel="icon" href="logo.jpg" type="image/jpeg">
-<meta name="description" content="Submit a teen's story to MSG Teens. Every story is reviewed before being published.">
-<meta property="og:title" content="Submit a Teen Story — MSG Teens">
-<meta property="og:description" content="Your story might be the one that changes how an adult sees a teen forever.">
-<meta property="og:url" content="https://msgteens.com/submit.html">
+<meta name="description" content="Research from MSG Teens — the evidence behind why teenagers are misunderstood, and what the science actually says.">
+<meta property="og:title" content="Research — MSG Teens">
+<meta property="og:description" content="The evidence behind the labels. Research by Joshua Wright and MSG Teens.">
+<meta property="og:url" content="https://msgteens.com/research.html">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://msgteens.com/logo.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -24,6 +24,7 @@
     --radius: 16px;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--black); overflow-x: hidden; }
 
   /* NAV */
@@ -39,107 +40,88 @@
   .nav-links a:hover { color: var(--blue); }
   .nav-cta { background: var(--blue); color: var(--white) !important; padding: 10px 22px; border-radius: 50px; font-weight: 600 !important; }
   .nav-cta:hover { background: #007aaa !important; }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; border: none; background: none; }
+  .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
   /* HERO */
-  .submit-hero {
-    background: var(--black);
-    color: var(--white);
-    padding: 72px 48px 56px;
-    text-align: center;
+  .research-hero {
+    background: var(--black); color: var(--white);
+    padding: 80px 48px 64px; text-align: center;
     border-bottom: 3px solid #222;
   }
-  .submit-hero .tag {
+  .research-hero .tag {
     font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
     text-transform: uppercase; color: var(--blue-light); margin-bottom: 20px;
   }
-  .submit-hero h1 {
+  .research-hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 5vw, 54px); font-weight: 900;
+    font-size: clamp(34px, 5vw, 56px); font-weight: 900;
     line-height: 1.1; margin-bottom: 20px;
   }
-  .submit-hero h1 em { color: var(--blue-light); font-style: normal; }
-  .submit-hero p {
-    font-size: 17px; color: #aaa; max-width: 540px;
-    margin: 0 auto 32px; line-height: 1.7;
-  }
-  .open-form-btn {
-    display: inline-block;
-    background: var(--blue); color: var(--white);
-    padding: 14px 32px; border-radius: 50px;
-    font-size: 15px; font-weight: 600; text-decoration: none;
-    transition: background 0.15s, transform 0.15s;
-    box-shadow: 0 4px 16px rgba(0,153,204,0.4);
-  }
-  .open-form-btn:hover { background: #007aaa; transform: translateY(-2px); }
+  .research-hero h1 em { color: var(--blue-light); font-style: normal; }
+  .research-hero p { font-size: 18px; color: #aaa; max-width: 560px; margin: 0 auto; line-height: 1.7; }
 
-  /* FORM SECTION */
-  .form-section {
-    max-width: 900px; margin: 0 auto;
-    padding: 56px 48px 80px;
+  /* CARD GRID (Instagram-style) */
+  .research-section { padding: 64px 48px; max-width: 1100px; margin: 0 auto; }
+  .research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
   }
-  .form-section-header {
-    text-align: center; margin-bottom: 40px;
-  }
-  .form-section-header h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px; font-weight: 700; margin-bottom: 10px;
-  }
-  .form-section-header p {
-    font-size: 15px; color: var(--grey);
-  }
-  .form-wrapper {
+  .research-card {
     border: 2px solid var(--blue-light);
     border-radius: var(--radius);
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0,153,204,0.1);
-    position: relative;
+    background: var(--white);
+    text-decoration: none; color: inherit;
+    display: flex; flex-direction: column;
+    transition: box-shadow 0.2s, transform 0.2s;
   }
-  .form-wrapper iframe {
-    display: block;
-    width: 100%;
-    border: none;
+  .research-card:hover { box-shadow: 0 12px 40px rgba(0,153,204,0.15); transform: translateY(-3px); }
+
+  /* Card image — square like an Instagram post */
+  .research-card-img {
+    width: 100%; aspect-ratio: 1/1;
+    object-fit: cover; background: var(--blue-pale);
+    display: block; border-bottom: 2px solid var(--blue-light);
   }
-  .form-loading {
-    position: absolute; inset: 0;
-    background: var(--blue-pale);
+  .research-card-img.placeholder {
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--blue-pale) 0%, #d0eaf8 100%);
+  }
+  .research-card-img.placeholder span { font-size: 56px; opacity: 0.5; }
+
+  .research-card-body { padding: 22px 22px 26px; flex: 1; display: flex; flex-direction: column; }
+  .research-card-meta { font-size: 11px; color: var(--grey); font-weight: 600; letter-spacing: 0.04em; margin-bottom: 10px; text-transform: uppercase; }
+  .research-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; font-weight: 700; line-height: 1.25;
+    margin-bottom: 12px; color: var(--black);
+  }
+  .research-card-summary { font-size: 14px; line-height: 1.7; color: #444; flex: 1; margin-bottom: 18px; }
+  .research-card-link {
+    font-size: 14px; font-weight: 600; color: var(--blue);
+    border-bottom: 2px solid var(--blue-light); padding-bottom: 2px;
+    align-self: flex-start; transition: border-color 0.2s;
+  }
+  .research-card:hover .research-card-link { border-color: var(--blue); }
+
+  /* PLACEHOLDER "add your research" card */
+  .research-placeholder {
+    border: 2px dashed var(--blue-light);
+    border-radius: var(--radius);
+    padding: 40px 28px;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
-    gap: 16px; pointer-events: none;
-    transition: opacity 0.4s;
+    text-align: center; background: var(--blue-pale);
+    min-height: 300px;
   }
-  .form-loading.hidden { opacity: 0; }
-  .form-loading-spinner {
-    width: 36px; height: 36px;
-    border: 3px solid var(--blue-light);
-    border-top-color: var(--blue);
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-  }
-  .form-loading p { font-size: 14px; color: var(--grey); font-weight: 500; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-
-  /* WHY SECTION */
-  .why-section {
-    background: var(--blue-pale);
-    border-top: 3px solid var(--blue-light);
-    padding: 56px 48px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 32px;
-  }
-  .why-card {
-    text-align: center; padding: 24px;
-  }
-  .why-icon {
-    font-size: 36px; margin-bottom: 16px;
-  }
-  .why-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px; font-weight: 700; margin-bottom: 10px;
-  }
-  .why-card p {
-    font-size: 14px; line-height: 1.7; color: #555;
-  }
+  .research-placeholder .icon { font-size: 40px; margin-bottom: 16px; }
+  .research-placeholder h3 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+  .research-placeholder p { font-size: 13px; color: #666; line-height: 1.6; }
 
   /* FOOTER */
   footer {
@@ -150,13 +132,9 @@
   footer a { color: var(--blue-light); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
 
-  /* HAMBURGER */
-  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; border: none; background: none; }
-  .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
-  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
+  @media (max-width: 900px) {
+    .research-grid { grid-template-columns: 1fr 1fr; }
+  }
   @media (max-width: 768px) {
     nav { padding: 0 24px; position: relative; }
     .nav-hamburger { display: flex; }
@@ -165,8 +143,9 @@
     .nav-links li { border-bottom: 1px solid var(--blue-pale); }
     .nav-links a { display: block; padding: 12px 0; font-size: 16px; }
     .nav-cta { margin-top: 8px; text-align: center; }
-    .submit-hero, .form-section { padding-left: 24px; padding-right: 24px; }
-    .why-section { grid-template-columns: 1fr; padding: 40px 24px; }
+    .research-hero { padding: 56px 24px 48px; }
+    .research-section { padding: 48px 24px; }
+    .research-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; text-align: center; }
   }
 </style>
@@ -181,9 +160,9 @@
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="wall-of-fame.html">Wall of Fame</a></li>
-    <li><a href="research.html">Research</a></li>
+    <li><a href="research.html" style="color:var(--blue);font-weight:600">Research</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="submit.html" style="color:var(--blue);font-weight:600">Submit a Story</a></li>
+    <li><a href="submit.html">Submit a Story</a></li>
     <li><a href="index.html#signup" class="nav-cta">Join Now</a></li>
   </ul>
   <button class="nav-hamburger" aria-label="Open navigation" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
@@ -192,52 +171,45 @@
 </nav>
 
 <!-- HERO -->
-<div class="submit-hero">
-  <p class="tag">Share a Story</p>
-  <h1>Every teen has a story<br><em>worth telling.</em></h1>
-  <p>Submit your own experience or nominate a teen who was misunderstood, overcame a challenge, or made a real difference in their community.</p>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZQDTAXI7Pxx9CCeGIIcZX04M4Gyn6ant9bBhRe1uhnVJ0Ww/viewform" target="_blank" class="open-form-btn">Open Form in New Tab ↗</a>
+<div class="research-hero">
+  <p class="tag">The Evidence</p>
+  <h1>The research behind<br><em>the labels.</em></h1>
+  <p>Every claim MSG Teens makes is backed by something real. This is where Joshua digs into the science, the studies, and the data behind how teenagers are misunderstood.</p>
 </div>
 
-<!-- WHY SUBMIT -->
-<div class="why-section">
-  <div class="why-card">
-    <div class="why-icon">📖</div>
-    <h3>Share Your Truth</h3>
-    <p>Your story might be the one that changes how an adult sees a teen forever.</p>
-  </div>
-  <div class="why-card">
-    <div class="why-icon">🏆</div>
-    <h3>Get Featured</h3>
-    <p>Approved stories are published on the site and shared with our growing community.</p>
-  </div>
-  <div class="why-card">
-    <div class="why-icon">💙</div>
-    <h3>Build the Movement</h3>
-    <p>Every story adds to the proof that teens deserve more credit than they get.</p>
-  </div>
-</div>
+<!-- RESEARCH CARD GRID -->
+<div class="research-section">
+  <div class="research-grid">
 
-<!-- EMBEDDED FORM -->
-<div class="form-section">
-  <div class="form-section-header">
-    <h2>Fill Out the Form Below</h2>
-    <p>Takes about 5 minutes. Your story is reviewed before being published.</p>
-  </div>
-  <div class="form-wrapper">
-    <div class="form-loading" id="formLoading">
-      <div class="form-loading-spinner"></div>
-      <p>Loading form…</p>
+    <!-- ===== RESEARCH CARD 1 (PLACEHOLDER) ===== -->
+    <a href="research-1.html" class="research-card">
+      <div class="research-card-img placeholder"><span>📊</span></div>
+      <div class="research-card-body">
+        <p class="research-card-meta">Joshua Wright · Coming soon</p>
+        <h2 class="research-card-title">The MSG Myth: How One Letter Started a 50-Year Panic</h2>
+        <p class="research-card-summary">A look at the 1968 letter that turned a safe food additive into a health scare — and what it teaches us about how labels spread faster than facts.</p>
+        <span class="research-card-link">Read the research →</span>
+      </div>
+    </a>
+
+    <!-- ===== RESEARCH CARD 2 (PLACEHOLDER) ===== -->
+    <a href="research-1.html" class="research-card">
+      <div class="research-card-img placeholder"><span>🧠</span></div>
+      <div class="research-card-body">
+        <p class="research-card-meta">Joshua Wright · Coming soon</p>
+        <h2 class="research-card-title">The Teenage Brain Isn't Broken — It's Building</h2>
+        <p class="research-card-summary">What neuroscience actually says about the adolescent brain, and why the traits adults call "immature" are signs of development, not defects.</p>
+        <span class="research-card-link">Read the research →</span>
+      </div>
+    </a>
+
+    <!-- ===== ADD-YOUR-RESEARCH PLACEHOLDER ===== -->
+    <div class="research-placeholder">
+      <div class="icon">🔬</div>
+      <h3>More research coming</h3>
+      <p>Joshua is working on new pieces. Check back soon — or submit a topic you'd like researched.</p>
     </div>
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdZQDTAXI7Pxx9CCeGIIcZX04M4Gyn6ant9bBhRe1uhnVJ0Ww/viewform?embedded=true"
-      height="1200"
-      frameborder="0"
-      marginheight="0"
-      marginwidth="0"
-      onload="document.getElementById('formLoading').classList.add('hidden')">
-      Loading form…
-    </iframe>
+
   </div>
 </div>
 
@@ -251,7 +223,6 @@
     <a href="index.html">Home</a>
     <a href="wall-of-fame.html">Wall of Fame</a>
     <a href="research.html">Research</a>
-    <a href="submit.html">Blog</a>
     <a href="submit.html">Submit a Story</a>
     <a href="about.html">About</a>
     <a href="privacy.html">Privacy</a>
